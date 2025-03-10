@@ -6,9 +6,12 @@ using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.UIElements;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Interactions;
 
 public class PlayerScript : MonoBehaviour
 {
+    private ArcheryInputs inputs;
+    
     //This needs to be set up dynamically : i.e the playerIDnumber; 
     [Header("Player Set Up")]
     public int playerIDnumber;
@@ -19,7 +22,8 @@ public class PlayerScript : MonoBehaviour
     public float jumpForce;
     private Rigidbody2D rb;
     private bool isGrounded;
-    private Vector2 moveInput;
+    private float moveInput;
+    private int lastDashInputDirection;
     
     [Header("Arrow Variables")]
     [SerializeField]
@@ -35,6 +39,7 @@ public class PlayerScript : MonoBehaviour
     private KeyCode lastKeyCode;
     public float dashCooldown = 1.0f;
     private float lastDashTime;
+    private int onDashDir;
 
     [Header("Aiming Renderer")]
     public LineRenderer circleRenderer;
@@ -55,46 +60,63 @@ public class PlayerScript : MonoBehaviour
     public GameObject arrowPrefab;
 
     private string inputMethod; //stores input type
-    private PlayerInput playerInput;
+
+    private void OnEnable()
+    {
+        inputs.Player.Enable();
+    }
+    
+    private void OnDisable()
+    {
+        inputs.Player.Disable();
+    }
+
+    private void InitializeInputs()
+    {
+        inputs = new ArcheryInputs();
+        inputs.Player.Move.performed += OnMove;
+        inputs.Player.Move.canceled += OnMove;
+        inputs.Player.Dash.started += context => onDashDir = context.ReadValue<float>() > 0 ? 1 : -1;
+        inputs.Player.Dash.performed += OnDash;
+        inputs.Player.Jump.performed += OnJump;
+        inputs.Player.Shoot.canceled += OnFire;
+    }
 
     void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();      
-        playerInput = GetComponent<PlayerInput>();
-        SetupCircle();  
+        rb = GetComponent<Rigidbody2D>();
+        SetupCircle();
+        InitializeInputs();
     }
 
 
     void Start()
     {
-        Dictionary<int,string> playerInputs = gameManager.instance.GetPlayerInputs();
+        // Dictionary<int,string> playerInputs = gameManager.instance.GetPlayerInputs();
 
-        if(playerInputs.TryGetValue(playerIDnumber, out string inputMethod))
-        {
-            Debug.Log("Player " + playerIDnumber + " has joined using " + inputMethod);
-            SetInputMethod(inputMethod);
-        } 
-        else 
-        {
-            Debug.LogError("Player " + playerIDnumber + " has not joined the game");
-        }
+        // if(playerInputs.TryGetValue(playerIDnumber, out string inputMethod))
+        // {
+        //     Debug.Log("Player " + playerIDnumber + " has joined using " + inputMethod);
+        //     SetInputMethod(inputMethod);
+        // } 
+        // else 
+        // {
+        //     Debug.LogError("Player " + playerIDnumber + " has not joined the game");
+        // }
 
-        assignPlayerLayer();
-
+        AssignPlayerLayer();
     }
 
     public void SetInputMethod(string inputMethod)
     {
-       if(playerInput != null)
-       {
-        playerInput.SwitchCurrentControlScheme(inputMethod);
-        Debug.Log("Player" + playerIDnumber + " has joined using " + inputMethod);
-       }
+       // if (playerInput != null)
+       // {
+       //     playerInput.SwitchCurrentControlScheme(inputMethod);
+       //     Debug.Log("Player" + playerIDnumber + " has joined using " + inputMethod);
+       // }
     }
-
     
-
-    void assignPlayerLayer()
+    void AssignPlayerLayer()
     {
         string layerName = "Player" + playerIDnumber;
         int layerNumber = LayerMask.NameToLayer(layerName);
@@ -109,7 +131,6 @@ public class PlayerScript : MonoBehaviour
         }
     }
     
-
     void SetupCircle()
     {
         circleRenderer.positionCount = circleSegments + 1;
@@ -142,32 +163,31 @@ public class PlayerScript : MonoBehaviour
         directionRenderer.SetPosition(0, Vector3.zero);
         directionRenderer.SetPosition(1, direction * circleRadius);
     }
-
-
-    /*
+    
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
-        {
-            jumpRequest = true;
-        }
+        // if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        // {
+        //     jumpRequest = true;
+        // }
+        //
+        // if ((Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.A)) && (Time.time >= lastDashTime + dashCooldown))
+        // {
+        //     KeyCode currentKeyCode = Input.GetKeyDown(KeyCode.D) ? KeyCode.D : KeyCode.A;
+        //     if (currentKeyCode == lastKeyCode && (Time.time - lastTapTime) < doubleTapTime)
+        //     {
+        //         dashDirection = (currentKeyCode == KeyCode.D ? 1 : -1);
+        //     }
+        //     lastTapTime = Time.time;
+        //     lastKeyCode = currentKeyCode;
+        // }
 
-        if ((Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.A)) && (Time.time >= lastDashTime + dashCooldown))
-        {
-            KeyCode currentKeyCode = Input.GetKeyDown(KeyCode.D) ? KeyCode.D : KeyCode.A;
-            if (currentKeyCode == lastKeyCode && (Time.time - lastTapTime) < doubleTapTime)
-            {
-                dashDirection = (currentKeyCode == KeyCode.D ? 1 : -1);
-            }
-            lastTapTime = Time.time;
-            lastKeyCode = currentKeyCode;
-        }
-
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        // TODO: i woudnt use Camera.main, its better to directly ref the camera
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue()); // Get mouse position (NEW INPUT SYSTEM)
         mousePos.z = 0;
         Vector3 direction = (mousePos - transform.position).normalized;
 
-        if (Input.GetMouseButton(0))
+        if (inputs.Player.Shoot.inProgress)
         {
             holdTime += Time.deltaTime;
             circleRenderer.enabled = true;
@@ -175,19 +195,19 @@ public class PlayerScript : MonoBehaviour
             directionRenderer.enabled = true;
             reducedcircleRadius = circleRadius - maxAimingDistance;
             float angleOffset = Mathf.Rad2Deg * (1f / reducedcircleRadius);  // angle in degrees
-
+            
             // Base position directly in the direction of the mouse
             Vector3 basePosition = direction * reducedcircleRadius;
-
+            
             // Rotated positions for aiming circles
             Vector3 initialPos1 = Quaternion.Euler(0, 0, angleOffset) * basePosition;
             Vector3 initialPos2 = Quaternion.Euler(0, 0, -angleOffset) * basePosition;
-
+            
             // Calculate convergence towards the base position
             float convergence = Mathf.Lerp(0, 1, holdTime / holdTimeToMaxAccuracy);
             Vector3 finalPos1 = Vector3.Lerp(initialPos1, basePosition, convergence);
             Vector3 finalPos2 = Vector3.Lerp(initialPos2, basePosition, convergence);
-
+            
             aimingCircle1.position = transform.position + finalPos1;
             aimingCircle2.position = transform.position + finalPos2;
         }
@@ -197,12 +217,14 @@ public class PlayerScript : MonoBehaviour
             circleRenderer.enabled = false;
             directionRenderer.enabled = false;
         }
-        if(Input.GetMouseButtonUp(0) && currentNumberofArrows > 0)
-        {
-            currentNumberofArrows--;
-            Shoot(direction,playerIDnumber);
-        }
-    }*/
+        
+        // TODO: old shoot
+        // if(Input.GetMouseButtonUp(0) && currentNumberofArrows > 0)
+        // {
+        //     currentNumberofArrows--;
+        //     Shoot(direction,playerIDnumber);
+        // }
+    }
     
     void Shoot(Vector3 direction, int playerIDnumber)
     {
@@ -246,6 +268,7 @@ public class PlayerScript : MonoBehaviour
             dashDirection = 0;
         }*/
     }
+    
     // handling arrow up
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -265,43 +288,56 @@ public class PlayerScript : MonoBehaviour
         }
         Debug.Log("Arrow Picked Up");
     }
-    void Move()
+    
+    private void Move()
     {
-        rb.velocity = new Vector2(moveInput.x * speed, rb.velocity.y);
+        rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
     }
 
-    public void OnMove(InputAction.CallbackContext context)
+    private void OnMove(InputAction.CallbackContext context)
     {
-        moveInput = context.ReadValue<Vector2>();
+        moveInput = context.ReadValue<float>();
     }
 
-    public void OnJump(InputAction.CallbackContext context)
+    private void OnDash(InputAction.CallbackContext context)
     {
-        if (context.started && isGrounded)
+        if (context.interaction is not MultiTapInteraction) return;
+        var currentDashInputDir = onDashDir;
+        if (lastDashInputDirection == currentDashInputDir)
+        {
+            Dash(currentDashInputDir);
+        }
+        lastDashInputDirection = currentDashInputDir;
+    }
+
+    private void OnJump(InputAction.CallbackContext context)
+    {
+        if (isGrounded)
         {
             rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
         }
     }
 
-    public void OnFire(InputAction.CallbackContext context)
+    private void OnFire(InputAction.CallbackContext context)
     {
+        // Debug.Log("Shoot");
         if(context.performed && currentNumberofArrows > 0)
         {
             Shoot();
             currentNumberofArrows--;
         }
     }
-
-
-    void Shoot()
+    
+    private void Shoot()
     {
         GameObject arrow = Instantiate(arrowPrefab, transform.position, Quaternion.identity);
         Rigidbody2D arrowRb = arrow.GetComponent<Rigidbody2D>();
         arrowRb.AddForce(Vector2.right * 20f, ForceMode2D.Impulse); // Example direction
     }
 
-    void Dash(int direction)
+    private void Dash(int direction)
     {
+        Debug.Log("Dash fired with direction: " + direction);
         Vector2 dashForce = new Vector2(dashSpeed * direction, 0);
         rb.AddForce(dashForce, ForceMode2D.Impulse);
         lastDashTime = Time.time;

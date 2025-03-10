@@ -402,7 +402,7 @@ MonoBehaviour:
   jumpForce: 5
   maxNumberofArrows: 3
   currentNumberofArrows: 2
-  dashSpeed: 150
+  dashSpeed: 300
   doubleTapTime: 0.2
   dashCooldown: 0.5
   circleRenderer: {fileID: 847668677518556302}
@@ -472,8 +472,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 8774f93459d614e25b4543641a3d722c, type: 3}
-  m_NotificationBehavior: 0
+  m_Actions: {fileID: -944628639613478452, guid: 4835ada7e21b0974fb2421e7c7996b60, type: 3}
+  m_NotificationBehavior: 3
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -484,10 +484,22 @@ MonoBehaviour:
   m_ControlsChangedEvent:
     m_PersistentCalls:
       m_Calls: []
-  m_ActionEvents: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 61ad3c7a-14f5-4ff1-95cb-73750b91dbb3
+    m_ActionName: Player/Move[/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 30aef24f-22db-4e87-ac57-4e93840f6901
+    m_ActionName: Player/Jump[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f79721ec-da53-498f-80e7-c9bbbea4c432
+    m_ActionName: Player/Shoot[/Mouse/leftButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: fcd66258-c581-4d6e-b398-98ab338387e7
+  m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!1 &6602849524041082893
