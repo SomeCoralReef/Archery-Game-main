@@ -6,8 +6,9 @@ public class ArrowScript : MonoBehaviour
 {
     private Rigidbody2D rb;
     private bool hasHit = false;
-
+    
     public bool isStuck = false;
+    [SerializeField]public int playerIDnumber;
 
     Vector3 startingScale;
     // Start is called before the first frame update

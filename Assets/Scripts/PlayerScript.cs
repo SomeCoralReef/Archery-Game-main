@@ -16,6 +16,7 @@ public class PlayerScript : MonoBehaviour
     [Header("Player Set Up")]
     public int playerIDnumber;
     
+    
 
     [Header("PlayerSetup")]
     public float speed;
@@ -92,18 +93,7 @@ public class PlayerScript : MonoBehaviour
 
     void Start()
     {
-        // Dictionary<int,string> playerInputs = gameManager.instance.GetPlayerInputs();
-
-        // if(playerInputs.TryGetValue(playerIDnumber, out string inputMethod))
-        // {
-        //     Debug.Log("Player " + playerIDnumber + " has joined using " + inputMethod);
-        //     SetInputMethod(inputMethod);
-        // } 
-        // else 
-        // {
-        //     Debug.LogError("Player " + playerIDnumber + " has not joined the game");
-        // }
-
+       
         AssignPlayerLayer();
     }
 
@@ -225,10 +215,21 @@ public class PlayerScript : MonoBehaviour
         //     Shoot(direction,playerIDnumber);
         // }
     }
+
     
-    void Shoot(Vector3 direction, int playerIDnumber)
+    private void OnFire(InputAction.CallbackContext context)
     {
-        
+        if(currentNumberofArrows > 0)
+        {
+            Debug.Log("Fire");
+            Shoot2(playerIDnumber);
+            currentNumberofArrows--;
+        }
+    }
+    
+    void Shoot2(int playerIDnumber)
+    {
+        Debug.Log("Player " + playerIDnumber + " is shooting");
         // Get positions relative to the player
         Vector3 pos1 = aimingCircle1.position - transform.position;
         Vector3 pos2 = aimingCircle2.position - transform.position;
@@ -247,7 +248,7 @@ public class PlayerScript : MonoBehaviour
         
         //assign the Arrow to the arrow
         arrow.layer = arrowLayerNumber;
-        
+        arrow.GetComponent<ArrowScript>().playerIDnumber = playerIDnumber;
         Rigidbody2D arrowRb = arrow.GetComponent<Rigidbody2D>();
         float angle = Mathf.Atan2(shootDirection.y, shootDirection.x) * Mathf.Rad2Deg;
         arrow.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
@@ -306,6 +307,7 @@ public class PlayerScript : MonoBehaviour
         if (lastDashInputDirection == currentDashInputDir)
         {
             Dash(currentDashInputDir);
+            Debug.Log("Dash");
         }
         lastDashInputDirection = currentDashInputDir;
     }
@@ -318,15 +320,6 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
-    private void OnFire(InputAction.CallbackContext context)
-    {
-        // Debug.Log("Shoot");
-        if(context.performed && currentNumberofArrows > 0)
-        {
-            Shoot();
-            currentNumberofArrows--;
-        }
-    }
     
     private void Shoot()
     {
@@ -352,7 +345,6 @@ public class PlayerScript : MonoBehaviour
             {
                 if (contact.normal.y > 0.5f) // Adjust this threshold if needed
                 {
-                    Debug.Log(contact + "normal.y > 0.5");
                     isGrounded = true;
                     return;
                 }
