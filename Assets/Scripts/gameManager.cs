@@ -5,8 +5,9 @@ using UnityEngine;
 public class gameManager : MonoBehaviour
 {
     public static gameManager instance;
-    private Dictionary<int, string> playerInputs = new Dictionary<int, string>();
-
+    public int playerCount = 4;
+    //private Dictionary<int, string> playerInputs = new Dictionary<int, string>();
+    private List<PlayerScript> players = new List<PlayerScript>();
     public GameObject playerPrefab; // The player prefab
     public Transform [] spawnPoints;
     
@@ -22,36 +23,34 @@ public class gameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    public void SetPlayerInputs(Dictionary<int, string> inputs)
+    public void AddPlayer(PlayerScript player)
     {
-        playerInputs = new Dictionary<int, string>(inputs);
+        players.Add(player);
     }
 
-    public Dictionary<int,string> GetPlayerInputs()
+    void Start()
     {
-        return playerInputs;
+        SpawnPlayers();
     }
-
     public void SpawnPlayers()
     {
-        Dictionary<int,string> playerInputs = GetPlayerInputs();
-        int i = 0;
-        foreach(var entry in playerInputs)
+        //players.Clear(); // Clear any previous player data
+        Debug.Log("Spawning " + playerCount + " players");
+        for (int i = 0; i < playerCount; i++)
         {
-            int playerID = entry.Key;
-            string inputMethod = entry.Value;
+            if (i >= spawnPoints.Length) 
+            {
+                Debug.LogError("Not enough spawn points for all players!");
+                break;
+            }
 
-            if(i>= spawnPoints.Length) break;
+        GameObject player = Instantiate(playerPrefab, spawnPoints[i].position, Quaternion.identity);
+        PlayerScript playerScript = player.GetComponent<PlayerScript>();
 
-            GameObject player = Instantiate(playerPrefab, spawnPoints[i].position, Quaternion.identity);
-            PlayerScript playerScript = player.GetComponent<PlayerScript>();
+        playerScript.playerIDnumber = i + 1; // Assign ID based on spawn order
+        AddPlayer(playerScript); // Register player in GameManager
 
-            playerScript.playerIDnumber = playerID;
-            playerScript.SetInputMethod(inputMethod);
-
-            Debug.Log("Player " + playerID + " has joined using " + inputMethod);
-            i++;
+        Debug.Log("Spawned Player " + playerScript.playerIDnumber);
         }
     }
 }

@@ -8,7 +8,6 @@ using UnityEngine.InputSystem;
 public class PlayerSelectionManager : MonoBehaviour
 {
     public static PlayerSelectionManager instance;
-    private Dictionary<int,string> playerInputs = new Dictionary<int, string>();
     private int maxPlayers = 4;
     private bool[] playerJoined = new bool[4];
     private int nextAvailableID =1;
@@ -32,19 +31,13 @@ public class PlayerSelectionManager : MonoBehaviour
 
         int playerID = nextAvailableID;
         nextAvailableID++;
-
-        string controlType = playerInput.currentControlScheme;
-        playerInputs[playerID] = controlType;
-
-        Debug.Log("Player " + playerID + " has joined using " + controlType);
     }
 
 
     public void StartGame()
     {
-        if(playerInputs.Count > 1)
+        if(gameManager.instance.playerCount > 1)
         {
-            gameManager.instance.SetPlayerInputs(playerInputs);
             SceneManager.LoadScene("GameScene");
         }
         else
