@@ -6,8 +6,9 @@ public class ArrowScript : MonoBehaviour
 {
     private Rigidbody2D rb;
     private bool hasHit = false;
-
+    
     public bool isStuck = false;
+    [SerializeField]public int playerIDnumber;
 
     Vector3 startingScale;
     // Start is called before the first frame update
@@ -38,7 +39,7 @@ public class ArrowScript : MonoBehaviour
                 groundController.AttachArrow(transform);
             }
             StickArrow(angle,collision);
-        } else if(!hasHit && collision.gameObject.layer == LayerMask.NameToLayer("Player 2"))
+        } else if(!hasHit && collision.gameObject.CompareTag("Player") && collision.gameObject.layer != gameObject.layer)
         {
             hasHit = true;
             Vector2 lastVelocity = rb.velocity;
@@ -46,7 +47,6 @@ public class ArrowScript : MonoBehaviour
             rb.velocity = Vector2.zero;
             rb.angularVelocity = 0;
             rb.isKinematic = true;
-
         }
     }
 
@@ -54,11 +54,10 @@ public class ArrowScript : MonoBehaviour
     {
         // Stick the arrow to the object it hit
         transform.localScale = startingScale;
-
         transform.rotation = Quaternion.Euler(0,0,angle);
-
-        transform.parent = collision.transform;
         isStuck = true;
+        Debug.Log("Arrow Stuck to " + collision.gameObject.name);
+        Debug.Log("Arrow Stuck at " + transform.position);
     }
     // Update is called once per frame
     void FixedUpdate()
