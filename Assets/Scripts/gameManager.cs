@@ -5,7 +5,7 @@ using UnityEngine;
 public class gameManager : MonoBehaviour
 {
     public static gameManager instance;
-    public int playerCount = 4;
+    public int playerCount = 2;
     //private Dictionary<int, string> playerInputs = new Dictionary<int, string>();
     private List<PlayerScript> players = new List<PlayerScript>();
     public GameObject playerPrefab; // The player prefab

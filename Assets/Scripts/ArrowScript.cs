@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 
 public class ArrowScript : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class ArrowScript : MonoBehaviour
     {
         if(!hasHit && collision.gameObject.CompareTag("Ground"))
         {
+            Debug.Log("Arrow hit the ground");
             hasHit = true;
             Vector2 lastVelocity = rb.velocity;
             float angle = Mathf.Atan2(lastVelocity.y, lastVelocity.x) * Mathf.Rad2Deg;
@@ -33,12 +35,13 @@ public class ArrowScript : MonoBehaviour
             rb.angularVelocity = 0;
             rb.isKinematic = true;
 
-            GroundController groundController = collision.gameObject.GetComponent<GroundController>();
+            /*GroundController groundController = collision.gameObject.GetComponent<GroundController>();
             if (groundController != null)
             {
                 groundController.AttachArrow(transform);
-            }
+            }*/
             StickArrow(angle,collision);
+            Debug.DrawRay(collision.contacts[0].point, collision.contacts[0].normal, Color.red, 5);
         } else if(!hasHit && collision.gameObject.CompareTag("Player") && collision.gameObject.layer != gameObject.layer)
         {
             hasHit = true;
@@ -47,6 +50,8 @@ public class ArrowScript : MonoBehaviour
             rb.velocity = Vector2.zero;
             rb.angularVelocity = 0;
             rb.isKinematic = true;
+            collision.gameObject.GetComponent<PlayerScript>().TakeDamage();
+            Debug.Log("Arrow hit the player");
         }
     }
 
@@ -56,8 +61,6 @@ public class ArrowScript : MonoBehaviour
         transform.localScale = startingScale;
         transform.rotation = Quaternion.Euler(0,0,angle);
         isStuck = true;
-        Debug.Log("Arrow Stuck to " + collision.gameObject.name);
-        Debug.Log("Arrow Stuck at " + transform.position);
     }
     // Update is called once per frame
     void FixedUpdate()
