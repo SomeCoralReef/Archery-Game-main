@@ -99,37 +99,15 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "A/D",
-                    "id": "9e3c5ba1-4900-4d84-acab-a7b60b583cb7",
-                    "path": "1DAxis",
-                    "interactions": "MultiTap",
+                    "name": "",
+                    "id": "d7c4e777-1207-4185-b743-8210a0987a11",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Dash",
-                    "isComposite": true,
+                    "isComposite": false,
                     "isPartOfComposite": false
-                },
-                {
-                    "name": "negative",
-                    "id": "f3f710a0-d113-4f2e-85a4-8fe70576c4df",
-                    "path": "<Keyboard>/a",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Dash",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "positive",
-                    "id": "5dfe73aa-a8be-4990-9292-3b953d3a7087",
-                    "path": "<Keyboard>/d",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Dash",
-                    "isComposite": false,
-                    "isPartOfComposite": true
                 }
             ]
         }

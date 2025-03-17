@@ -20,9 +20,13 @@ public class PlayerScript : MonoBehaviour
 
     [Header("PlayerSetup")]
     public float speed;
+    public float deceleration;
     public float jumpForce;
+    public float jumpTimeLimit;
     private Rigidbody2D rb;
+    private float jumpTimer;
     private bool isGrounded;
+    private bool isJumping;
     private float moveInput;
     private int lastDashInputDirection;
     
@@ -35,12 +39,12 @@ public class PlayerScript : MonoBehaviour
 
    [Header("Arrow Variables")]
     public float dashSpeed = 10f;
-    public float doubleTapTime;
     private float lastTapTime;
     private KeyCode lastKeyCode;
     public float dashCooldown = 1.0f;
     private float lastDashTime;
-    private int onDashDir;
+    private bool isDashing;
+    public float dashTime = 0.1f;
 
     [Header("Aiming Renderer")]
     public LineRenderer circleRenderer;
@@ -76,10 +80,10 @@ public class PlayerScript : MonoBehaviour
     {
         inputs = new ArcheryInputs();
         inputs.Player.Move.performed += OnMove;
-        inputs.Player.Move.canceled += OnMove;
-        inputs.Player.Dash.started += context => onDashDir = context.ReadValue<float>() > 0 ? 1 : -1;
+        inputs.Player.Move.canceled += context => moveInput = 0;
         inputs.Player.Dash.performed += OnDash;
-        inputs.Player.Jump.performed += OnJump;
+        inputs.Player.Jump.started += OnJump;
+        inputs.Player.Jump.canceled += context => isJumping = false;
         inputs.Player.Shoot.canceled += OnFire;
     }
 
@@ -214,6 +218,19 @@ public class PlayerScript : MonoBehaviour
         //     currentNumberofArrows--;
         //     Shoot(direction,playerIDnumber);
         // }
+
+        if (inputs.Player.Jump.inProgress && isJumping)
+        {
+            if (jumpTimer > 0)
+            {
+                rb.velocity = Vector2.up * jumpForce;
+                jumpTimer -= Time.deltaTime;
+            }
+            else
+            {
+                isJumping = false;
+            }
+        }
     }
 
     
@@ -256,16 +273,6 @@ public class PlayerScript : MonoBehaviour
     void FixedUpdate()
     {
         Move();
-        /*if (jumpRequest)
-        {
-            Jump();
-            jumpRequest = false;
-        }
-        if (dashDirection != 0)
-        {
-            Dash(dashDirection);
-            dashDirection = 0;
-        }*/
     }
     
     // handling arrow up
@@ -290,7 +297,15 @@ public class PlayerScript : MonoBehaviour
     
     private void Move()
     {
-        rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+        if (moveInput != 0)
+        {
+            rb.velocity = isDashing ? new Vector2(moveInput * dashSpeed, 0) :
+                new Vector2(moveInput * speed, rb.velocity.y);
+        }
+        else
+        {
+            rb.velocity = Vector2.Lerp(rb.velocity, new Vector2(0, rb.velocity.y), deceleration * Time.fixedDeltaTime);
+        }
     }
 
     private void OnMove(InputAction.CallbackContext context)
@@ -300,21 +315,26 @@ public class PlayerScript : MonoBehaviour
 
     private void OnDash(InputAction.CallbackContext context)
     {
-        if (context.interaction is not MultiTapInteraction) return;
-        var currentDashInputDir = onDashDir;
-        if (lastDashInputDirection == currentDashInputDir)
+        if (lastDashTime + dashCooldown < Time.time)
         {
-            Dash(currentDashInputDir);
-            Debug.Log("Dash");
+            isDashing = true;
+            lastDashTime = Time.time;
+            Invoke("ResetDash", dashTime);
         }
-        lastDashInputDirection = currentDashInputDir;
+    }
+
+    private void ResetDash()
+    {
+        isDashing = false;
     }
 
     private void OnJump(InputAction.CallbackContext context)
     {
         if (isGrounded)
         {
-            rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+            jumpTimer = jumpTimeLimit;
+            isJumping = true;
+            rb.velocity = Vector2.up * jumpForce;
         }
     }
 
@@ -331,14 +351,6 @@ public class PlayerScript : MonoBehaviour
         GameObject arrow = Instantiate(arrowPrefab, transform.position, Quaternion.identity);
         Rigidbody2D arrowRb = arrow.GetComponent<Rigidbody2D>();
         arrowRb.AddForce(Vector2.right * 20f, ForceMode2D.Impulse); // Example direction
-    }
-
-    private void Dash(int direction)
-    {
-        Debug.Log("Dash fired with direction: " + direction);
-        Vector2 dashForce = new Vector2(dashSpeed * direction, 0);
-        rb.AddForce(dashForce, ForceMode2D.Impulse);
-        lastDashTime = Time.time;
     }
 
     void OnCollisionEnter2D(Collision2D col)
