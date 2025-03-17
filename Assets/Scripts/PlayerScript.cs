@@ -221,7 +221,6 @@ public class PlayerScript : MonoBehaviour
     {
         if(currentNumberofArrows > 0)
         {
-            Debug.Log("Fire");
             Shoot2(playerIDnumber);
             currentNumberofArrows--;
         }
@@ -229,7 +228,6 @@ public class PlayerScript : MonoBehaviour
     
     void Shoot2(int playerIDnumber)
     {
-        Debug.Log("Player " + playerIDnumber + " is shooting");
         // Get positions relative to the player
         Vector3 pos1 = aimingCircle1.position - transform.position;
         Vector3 pos2 = aimingCircle2.position - transform.position;
@@ -273,6 +271,7 @@ public class PlayerScript : MonoBehaviour
     // handling arrow up
     void OnTriggerEnter2D(Collider2D col)
     {
+        Debug.Log("Player" + playerIDnumber + " collided with " + col.name);
         if(col.CompareTag("Arrow") && (currentNumberofArrows < maxNumberofArrows))
         {
             HandleArrowPickUp(col.gameObject);
@@ -287,7 +286,6 @@ public class PlayerScript : MonoBehaviour
             Destroy(arrow);
             currentNumberofArrows++;
         }
-        Debug.Log("Arrow Picked Up");
     }
     
     private void Move()
@@ -320,6 +318,13 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
+    public void TakeDamage()
+    {
+        Invoke("Die", 3f);
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        rb.velocity = Vector2.zero;
+        rb.AddForce(Vector2.right * 10f, ForceMode2D.Impulse);
+    }
     
     private void Shoot()
     {
