@@ -7,6 +7,7 @@ using UnityEngine.Playables;
 using UnityEngine.UIElements;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Interactions;
+using UnityEngine.InputSystem.Users;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -16,7 +17,9 @@ public class PlayerScript : MonoBehaviour
     [Header("Player Set Up")]
     public int playerIDnumber;
     
-    
+    [Header("Input Type")]
+    public PlayerInput playerInput;
+    private InputUser inputUser;
 
     [Header("PlayerSetup")]
     public float speed;
