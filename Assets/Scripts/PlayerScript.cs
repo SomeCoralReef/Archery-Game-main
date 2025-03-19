@@ -47,6 +47,7 @@ public class PlayerScript : MonoBehaviour
     private float lastDashTime;
     private bool isDashing;
     public float dashTime = 0.1f;
+    int currentDashInputDir;
 
     [Header("Aiming Renderer")]
     public LineRenderer circleRenderer;
@@ -296,10 +297,6 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
-    {
-        Move();
-    }
 
     
     private void Move()
