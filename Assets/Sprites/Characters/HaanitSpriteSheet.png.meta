@@ -1,0 +1,6595 @@
+fileFormatVersion: 2
+guid: e69bf10a0862ad247a3508c75b385a0b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 477
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32413584d90c95943b6f449967b0880c
+      internalID: -1516484389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 477
+        width: 15
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4883714f0c367aa42900603c43638de3
+      internalID: 1871813322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 477
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbf68a8109aab884386a0e4194ed3f41
+      internalID: 819896810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 480
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52c4cda57c9842e4ba18afe11c53fc77
+      internalID: -296380352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 480
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 552362d66df314f4a967feacb18bf27b
+      internalID: -1354996010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 477
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d44903eb2f9ba3348a86f15b7f087f1d
+      internalID: 1605417468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 477
+        width: 15
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 938e69e8e815ece4c957012de7f2ef6d
+      internalID: 1803586473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 477
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2886a0deefb844149997bf5624ffb9c6
+      internalID: 1951932907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 480
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4433b23cf3df26a4e92a3ceffa282c2d
+      internalID: 1472095666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 480
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba67f69ff1885e042a0f43471a0eb523
+      internalID: 1067613707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 477
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da702528829fdaf46a88e5b11ae9ae6a
+      internalID: -283041682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 478
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 554aa25357c44cf4894c6af50090d915
+      internalID: 1705543772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 481
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66fcb916492036546a324737b8d8b813
+      internalID: -1031098033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 481
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dcf4734281872b4cb884c8e1d30ce48
+      internalID: -1317641241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 482
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee2b9b10c2a4955498faed1260d6d6f0
+      internalID: -1727623495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 482
+        width: 18
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 882785ef68a408641b93c23206eccec4
+      internalID: -409503973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 481
+        width: 18
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14f7425e74cca584a8446ac3accc884b
+      internalID: -836844766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 479
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 712e0984bb8530041bcf985f1b1bd35e
+      internalID: -599161124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 477
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ef084689e55eb44d95c1d134915aed0
+      internalID: -2136917536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 478
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fedacdbccb5f4b41af1cba9480f641b
+      internalID: -1690095256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 481
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a673b2a42a0d0ee418d8818ca0bf1716
+      internalID: -387581241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_21
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 481
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 323d4fc4d1b0ee94fb1e35b979080501
+      internalID: -1900790434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_22
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 482
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85fdb71a1b47c124ea511b3c9085e3bb
+      internalID: -1816709930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_23
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 447
+        width: 18
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ce640e01ecfe5e48bd26e3aeb77f51f
+      internalID: -1877850705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_24
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 446
+        width: 18
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f6ba3dc331a3644e90a01d354ba78cd
+      internalID: -141114054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_25
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 444
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bcddf310143cb6408ce312c42228f5a
+      internalID: 1452908784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_26
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 445
+        width: 21
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d38a94453fe4794f9291f08301a65e2
+      internalID: 1904813318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_27
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 445
+        width: 21
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c6fcbf8d568bd24d8e74e495c6e85c3
+      internalID: -1880101833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_28
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 450
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76e5c9af8391ffd41be90a953758f2fa
+      internalID: -1337665299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_29
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 450
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9341b65df348a9a4f995139237f85e8f
+      internalID: -987125414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_30
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 450
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e541f29e4319fb7489b5c6cd35c31701
+      internalID: 1696614905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_31
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 450
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 803a62dedd5c02a4ab7cb6dfcb919fc2
+      internalID: -1378691149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_32
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 450
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c22ca6ec7e32b9047be66c1fe5bf5c35
+      internalID: 1349460822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_33
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 450
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 603c9c89dabce394e92174dfaf8afbe6
+      internalID: 1399389887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_34
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 442
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5230ce60b86241e4d8d02fffc8a85730
+      internalID: 1234016175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_35
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 442
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b3b36aa1af6c3e419406f4b9d81e4da
+      internalID: 449863933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_36
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 449
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b56714c404050e846a888d03a6d3d870
+      internalID: -1197682533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_37
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 449
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24f8770fd22c8b040acf5af41ef12388
+      internalID: 1392836174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_38
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 448
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97e953469e0f2694dbd725595e62044d
+      internalID: -792592504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_39
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 448
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bc863ed24d020e4dbf255ba598a5761
+      internalID: -545269725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_40
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 449
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b72e306205f64f647b5e0b23c0e196ca
+      internalID: -1669437176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_41
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 449
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 937d4a10219af1a4b9b31110620d0639
+      internalID: -1129998858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_42
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 448
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22a03cd79778bcf4e9174df16e915107
+      internalID: -830337597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_43
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 448
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57c5ffcffa31bbd4fa349c9a82753b5f
+      internalID: -1561427587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_44
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 442
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29aed2a34f0e95d49978cc977b242d71
+      internalID: 686861860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_45
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 443
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f293aee0ef6db04b93582fe5c533022
+      internalID: -1094067296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_46
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 444
+        width: 21
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c90bd8f2230f217448dfbdbe7bad353d
+      internalID: 1205538413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_47
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 409
+        width: 22
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47b0474eaeb527b409de5c2aea40fc1b
+      internalID: -2046164672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_48
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 409
+        width: 22
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1512042c5b8f59848962370ec9f0fdb9
+      internalID: -874456372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_49
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 409
+        width: 22
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b28a6c3d3984a8c409c99dc10afb7777
+      internalID: 1063870284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_50
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 408
+        width: 19
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a75a758098c82c543baadaa7ec7cca75
+      internalID: -945691374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_51
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 407
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7c7f97f8097792478ba7ec015c61c85
+      internalID: -1363954167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_52
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 408
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c8c47194bd782d41928973d2029dea1
+      internalID: 269419118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_53
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 409
+        width: 21
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13fbaa2163c8b6945ab6f40e561cc455
+      internalID: -1566996985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_54
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 409
+        width: 22
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8081a4779e3cf44b8e0a2345a4b4b57
+      internalID: -1050178836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_55
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 409
+        width: 22
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7015b615973f7547bd13782aa794b59
+      internalID: 1042758688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_56
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 409
+        width: 22
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65913467d6a5f51468d50669e1d81dac
+      internalID: 680835011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_57
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 408
+        width: 19
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0816ce3b9d85074b98040b45034f5eb
+      internalID: -89818494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_58
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 408
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee404a5d9c662cd429a53f5ae2bd50be
+      internalID: -263197213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_59
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 399
+        width: 24
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32a95c31360da1e4cb0699efe7b344d8
+      internalID: 1237786422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_60
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 411
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 238d1b04af530bd4f8e86c8d924e192a
+      internalID: -960332646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_61
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 412
+        width: 35
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b91acf9356e240645933139978df34dd
+      internalID: 1781988156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_62
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 412
+        width: 35
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88809f768e86ddb44b10578806155afa
+      internalID: 59479876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_63
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 411
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c770a33831ebee34e9dc9e503822aba8
+      internalID: 501514346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_64
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 409
+        width: 38
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fd10df6a4e60944799ee63d19d1c11a
+      internalID: -896770596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_65
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 365
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e3eaaf46297ab64c93e02a237404917
+      internalID: -108013614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_66
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 356
+        width: 24
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3acf29a8561a47a4eaa5b85cae482e59
+      internalID: -2061802642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_67
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 368
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0097c8278e59634b8747ac4b6fcc62b
+      internalID: -327784791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_68
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 369
+        width: 35
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a97ff4003393e1a40ad0afedf1bec804
+      internalID: 229588854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_69
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 369
+        width: 35
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36e66741023dc5e4f860b50fa6ac9225
+      internalID: 1867780494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_70
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 368
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18e95fffbe0e4a04eaa3c9fd2e5415cb
+      internalID: -1027750430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_71
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 366
+        width: 38
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f59ade7d60f0cf4c9f46c7f26895eaf
+      internalID: -344535554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_72
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 367
+        width: 21
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77029693d69a00749b68c2e39c91894d
+      internalID: -1779366046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_73
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 367
+        width: 21
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e33c2003f8338f4bbae5cc73caae9a6
+      internalID: 690627418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_74
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 364
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7364bd18e197094aa9ee4e5039d8a99
+      internalID: -498891199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_75
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 364
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3fa6c92bd2c5ec4aa01db503509ea03
+      internalID: 274088233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_76
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 364
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b03c02a1d9d42d45b1d93937d833979
+      internalID: 1591050659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_77
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 364
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 716902d8204e30840b30d1a7bb1f754d
+      internalID: -1187519910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_78
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 364
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4098dcfe34f215428aa39e6561bc29d
+      internalID: 261917949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_79
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 364
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b230a9fc44f598e44a8a4ffbefd62cfa
+      internalID: -1458292431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_80
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 366
+        width: 29
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eccc58c4422712459786a9027ba3f59
+      internalID: 1180880476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_81
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 366
+        width: 29
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c038c8a0d588a09418fa52b83129633d
+      internalID: -389577393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_82
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 365
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14888daa20ea14d4faaea04c0292a20e
+      internalID: 1095208604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_83
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 322
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31df21aa1de93bd408113a54f753c2bd
+      internalID: -515744663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_84
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 341
+        width: 32
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 108e38a60a22eac4bb66de0c89adefea
+      internalID: 1238204498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_85
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 341
+        width: 32
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03757116df3f5324bac7154e1d3c9574
+      internalID: -933149493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_86
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 322
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35f18b9493796f24ebbc8af2ed38fa54
+      internalID: -75828682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_87
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 322
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cbedda544ccdf24d9fa1a3a04827ba8
+      internalID: -554124371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_88
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 323
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acc7f994dd1475340a75388bd5a5462c
+      internalID: 286077514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_89
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 323
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b36f94a44f0112418650bfb39b9f0a8
+      internalID: 1939464050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_90
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 323
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85921d92718596f40a40df5325bf5780
+      internalID: -2111497355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_91
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 323
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ca4397dd85a95a43a5d01d727c23226
+      internalID: 1185875405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_92
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 323
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97b67677e1175bd48ad44051675f14bb
+      internalID: -1912153443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_93
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 323
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 028da52ee2b23694c848f6cf58fe35e2
+      internalID: 1235748343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_94
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 321
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18993d23283f4c3429226d907a4e4009
+      internalID: 353275450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_95
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 321
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f964812978ecc084bbbc47290281ae44
+      internalID: -722251245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_96
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 321
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0d254d5c919c384ba1e5f5779deab5a
+      internalID: 1239635141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_97
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 321
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c19d00220451df249bb500a23a275e4c
+      internalID: 1830569698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_98
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 321
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7799f3b294db3234998ecfdf04198917
+      internalID: 1354795687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_99
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 321
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa1fbc788201f5148b05793c919d7627
+      internalID: 1974582123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_100
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 321
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05da21b60a0da2c419c4e5fbf8baf287
+      internalID: 1506325730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_101
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 321
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e40d06c279de9b64bb021078c203ea71
+      internalID: 1059145458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_102
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 321
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6258903da9c7a1c498976def1ecae78c
+      internalID: -1519183640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_103
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 321
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3baa3b450808f194db47a51c1453b1d7
+      internalID: -722452129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_104
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 321
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 867ab0c1e0d53a74da152d12dbbb6fbf
+      internalID: 946816506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_105
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 286
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef89b6a381105294988e54a2d3308295
+      internalID: -1264068066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_106
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 286
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebaace75aea212e488a94b02a399a24e
+      internalID: 1945004670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_107
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 286
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e5b7fe65e443c5489a4803a90b3f4f7
+      internalID: 703772729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_108
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 286
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 073da9666b5ff354dae4a2339bcdf7e5
+      internalID: 1468445886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_109
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 286
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf99a5225ba2e8a429180f860b3887e5
+      internalID: -1589745157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_110
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 286
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 575df333e804e0c48afbde31855cec9f
+      internalID: 144114887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_111
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 286
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dffd9252dd92170469e0a831b07f7c11
+      internalID: -1371006031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_112
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 286
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af548b3af1004c74eb5d4e558b82f8c2
+      internalID: -2059913037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_113
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 286
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18c0407242454054182e7e6e55d7971d
+      internalID: 1865217361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_114
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 286
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c858a81a967e84c47bf69beffd29f794
+      internalID: -1252183343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_115
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 286
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 712ee215117e4c640862a3eca03585fa
+      internalID: 782305344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_116
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 286
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0125f6465726f6143b37ba41c3b63648
+      internalID: -516091882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_117
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 286
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c29753c086f32e4282337034adf2423
+      internalID: -762650074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_118
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 287
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 523044ccf95fb66449ab57151c5db52b
+      internalID: 1303315723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_119
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 287
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa2506d0d2d541c4c9755c6d1e5fe1f6
+      internalID: 1188607619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_120
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 287
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28defce2d5621da45864620b63507761
+      internalID: -550374992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_121
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 287
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 707bee47251981a409265f2c1f8a25a9
+      internalID: 2123771344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_122
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 286
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f3139534ff2d1e409d32d0891233875
+      internalID: 1744638733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_123
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 286
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 194b1b8cb2419ba4da863407da416459
+      internalID: 1217248410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_124
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 286
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d4a14ffdf34ae34cbb3a30598eaa5e6
+      internalID: -446028618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_125
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 286
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49db69eb076571643884040debe7a915
+      internalID: 2112640645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_126
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 286
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0265f7a1a48f88f439c3480e3c7d1289
+      internalID: -564087810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_127
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 286
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 926f9fd56dc035245bf96303e7464a49
+      internalID: 1782602324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_128
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 251
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35e0ea754e1cef442afdec1c422c97d3
+      internalID: 1980016309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_129
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 251
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfb727e7ea743814bb936143a75286b8
+      internalID: 1229676884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_130
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 269
+        width: 33
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b42d6d0ff19f6944b7cd2085722576a
+      internalID: -1123447077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_131
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 269
+        width: 33
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cdc5734ea8b8b34e94f2ad964baf6d1
+      internalID: -595292556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_132
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 251
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aafe5477848bfa24982e0584b6efdc6c
+      internalID: -1915019900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_133
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 251
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04e88768aeff87e40a849d5b05930ee1
+      internalID: -597957302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_134
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 251
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fcfa7cfc7ba6884484e88d439503815
+      internalID: -1671043376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_135
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 251
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 661e5848a366d6a4f9c04edf0c7e8475
+      internalID: -244210785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_136
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 251
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfd5b1008ce675e42ab4f2091c9d3f23
+      internalID: 503441759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_137
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 251
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5777931f80060ef4083264b22966a85a
+      internalID: 1124743155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_138
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 252
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d20d8098e8eaa93449f75afb7af305e1
+      internalID: 1339177060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_139
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 252
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9790967eccd3b384f8dde8c8bd7ccffd
+      internalID: 1390341705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_140
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 252
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee1dee8572d96694fb0dcbac5a3d7fc5
+      internalID: -295074817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_141
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 252
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9f97f5d437c8c041831abadc708f68a
+      internalID: -712919649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_142
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 252
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85faeaf42c7a50c4c96f031798b0a119
+      internalID: -1801127777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_143
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 252
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11c4f75c84b2ade4394eedd39a7a3909
+      internalID: -141083725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_144
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 251
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eafe6cd5540b7a4d8230121877e2661
+      internalID: -1564403033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_145
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 251
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a8b02611fdb3f8499b3b0174f21b659
+      internalID: 21190720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_146
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 251
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f04c7c23f539ebf4eabfbebf5f2a567b
+      internalID: -1550531025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_147
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 251
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8cae3dd3035d094fa7e64d4c6235eab
+      internalID: -2011101883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_148
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 251
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1007f2eff6a83554eabefd519be14dd1
+      internalID: 1897207933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_149
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 251
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7f67fc191a25fb4d91e7136b534424d
+      internalID: -1983695220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_150
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 216
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1ba32ed3e1d07e4ab2137028095b6fc
+      internalID: 699955373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_151
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 219
+        width: 17
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ff3eab66ac1d664387ee5302210ce95
+      internalID: -1972391538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_152
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 218
+        width: 17
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 623bd0eccc2cbb44b9310ec0ee7920a7
+      internalID: -1698620221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_153
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 216
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 296ff62b6e073f448beffb20dcbc16fa
+      internalID: 1681007257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_154
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 219
+        width: 17
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 497f0beabe167b749bf90ceaf1d5ee09
+      internalID: 33968589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_155
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 218
+        width: 17
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 901aa20a731f7794f89af74840474e65
+      internalID: -778544683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_156
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 216
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 405fbc922a6ad264aa80895015345708
+      internalID: -252527883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_157
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 219
+        width: 17
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6808047538a5eb408a99d539629c588
+      internalID: 836502744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_158
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 218
+        width: 17
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 960af7446ee739c4eab02329c107e8a5
+      internalID: -273228039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_159
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 216
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1027b1190e2e0d4cad415d288762e61
+      internalID: 626736043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_160
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 219
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3323e36f00e988b42aa4cb8123f7bb17
+      internalID: 548114119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_161
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 218
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2cdcd137c397f24bb799f8e1a49ad13
+      internalID: 793187702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_162
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 216
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a99e54e7c2e39414db93b23cc13e5947
+      internalID: 1551781635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_163
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 219
+        width: 17
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e6e618e9127d84498c8f03bd17a7036
+      internalID: -1369783798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_164
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 219
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05368b42eb3b289449904728cd523a63
+      internalID: -125243514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_165
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 217
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ec2c472c0ee79742ad370962b3da789
+      internalID: -1888926391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_166
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 219
+        width: 17
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 233a86033d7c60e43b5233c162cdd764
+      internalID: 1697018392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_167
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 219
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e67a2414019e08845b0dc272d55c7f07
+      internalID: -913196830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_168
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 217
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2ec6a9b3961e1d48aa42e707e79798b
+      internalID: 798937128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_169
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 219
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a14c56cf74ade748ac8da13e009978d
+      internalID: 945241087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_170
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 219
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dff4f761080be94d8806157390a7c68
+      internalID: 1066923242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_171
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 217
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bdc1b4a803086c4b8ac0b565841dbb9
+      internalID: -326645193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_172
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 219
+        width: 17
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e10b1e25a13678498d4eacef8c3d349
+      internalID: -854427673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_173
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 219
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa7e7fdc1a785e14c9b4a8bb2f96fbc6
+      internalID: -1717389171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_174
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 217
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8ad5e924353ed44d95da24d37852e0d
+      internalID: -219161502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_175
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 216
+        width: 25
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c49fd59ce4dd3e64ab27c1a128974b7e
+      internalID: 153451538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_176
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 181
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40f641d66681ffc4d804a09631216626
+      internalID: 247012584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_177
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 180
+        width: 19
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0331dcb671da78543b58a57abd8461dd
+      internalID: -477209933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_178
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 182
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50822ef8b13bedb419cfeda782394e2d
+      internalID: 1253381647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_179
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 182
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83f72ef021acb784daebe5562888fcb5
+      internalID: -1626329055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_180
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 181
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a4f8c97973b68645a852ca2bf708db8
+      internalID: -2084641898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_181
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 181
+        width: 25
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01f4fd5312b5b174588c9baa0de5ec1a
+      internalID: 1379332360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_182
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 181
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e272b43ba3e4c2f4d93672be71a362f5
+      internalID: 989218554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_183
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 180
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 829ddae625b8ca54d9ca4c175f7597ee
+      internalID: 888077750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_184
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 182
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1f56640b09a6214a92ad24bf37c7420
+      internalID: -699999483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_185
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 182
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63b3d3488626b4a479d9cead767477ef
+      internalID: 945920082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_186
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 181
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd655a4a3da54544485165e52336c64c
+      internalID: 1844370310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_187
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 181
+        width: 25
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8e4daba97abf8245bc05655779209e0
+      internalID: 1120432364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_188
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 181
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28d2999205ac6f941ae01e636c4a2151
+      internalID: -767412287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_189
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 180
+        width: 19
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e987800455b31743bd1aec5e2c22725
+      internalID: 1455300222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_190
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 182
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8ce1452cb9e8414da91dfdc3eb5f427
+      internalID: -1432713142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_191
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 182
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 866959e39b87d034b9567f3a3bbe80c1
+      internalID: -1506951075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_192
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 181
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a2570fc3653f9041b931d0504e027c0
+      internalID: 1037584091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_193
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 181
+        width: 25
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62fb1879878c0974880896ede62b6d03
+      internalID: 948954480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_194
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 181
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b461c44fe58b8944ab29b448dc930c53
+      internalID: 438502902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_195
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 180
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb7d065710e1fbd40aacfdcc1d1f4a62
+      internalID: -503202573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_196
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 182
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebd67f5a49e71ed44b95982a5c61daee
+      internalID: 722526691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_197
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 146
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a404e560975c6574ea2eee0dcb881523
+      internalID: 75692833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_198
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 145
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd653f9b95dbeae4296e3d20172dcbf0
+      internalID: 750705526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_199
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 147
+        width: 17
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45c5b7e5eb85b804eab1abe8d77a97b7
+      internalID: 510417425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_200
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 146
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88be54afe46fb2b4698e3ffae2d08910
+      internalID: -623421002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_201
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 144
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bde60a37bbb51649b5571dcbf41b94e
+      internalID: 1438210729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_202
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 147
+        width: 17
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ae59b00a53bf2640a09079c28fb5c50
+      internalID: -2131427840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_203
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 146
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f437ad2406dd6f45bcfe9a79dca2445
+      internalID: -9352130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_204
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 144
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a35a880ed49a24f4db6c193ef2b72217
+      internalID: -1622336999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_205
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 147
+        width: 17
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f6bbb614843fe843b7eb315a84c5211
+      internalID: 823055696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_206
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 146
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f7b59b00e6638841a74d46d07baa3d3
+      internalID: 2139086989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_207
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 144
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 180d188ee33ff9f479e831c6774e585c
+      internalID: 135927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_208
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 147
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c4486aec61e1e24c9863be2e0a57c35
+      internalID: -890464909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_209
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 146
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b024a81d551a30408a55ee073061ce6
+      internalID: -1104890899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_210
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 144
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5f96bf8228e7e24f8972c084d0608ba
+      internalID: -1769437647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_211
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 147
+        width: 17
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dec352a8c63c5504ebe716346e2f1e58
+      internalID: 1518241141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_212
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 147
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ea6651df89a9484caeafa1d6dc5a45d
+      internalID: -1683665023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_213
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 145
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46879e01aae012242929eac74ba4b97f
+      internalID: 1160631056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_214
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 147
+        width: 17
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eec244bbf43d8d4d820bdbcf91231d3
+      internalID: -571368139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_215
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 147
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89a8753325b997f46b6576e0068c3c0a
+      internalID: 1227382820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_216
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 145
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee956deee09d3304296e11fba5126b37
+      internalID: 1160625400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_217
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 147
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cd27cd284eb49d4999f69369ef6057b
+      internalID: -998327998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_218
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 147
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81b0f0cdda5119c46ba5e3b22887670b
+      internalID: -1686208391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_219
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 145
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ea427da26734d64395a66809910bdad
+      internalID: -894487533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_220
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 147
+        width: 17
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c29be9502d12e8479b358a9ea6de398
+      internalID: 841291983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_221
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 147
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c905a7daddb7ecd4aa3382ac826a97a7
+      internalID: 1173019331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_222
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 145
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e955719a921d1a34bbdba0caa81c66d8
+      internalID: 911654898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_223
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 109
+        width: 25
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9825dd51d0df5e2418a91d21742b5260
+      internalID: -1987273214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_224
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 109
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04252f934442e10438a211b5d7477c34
+      internalID: 1105882294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_225
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 108
+        width: 19
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8f13076d15d69341ac3ebcc91f94333
+      internalID: 229739283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_226
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 110
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 955201e2c71a9354aa6f1afc5851b331
+      internalID: 1024111558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_227
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 110
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16dc7cb42284643419a15a2b8b559403
+      internalID: -1886667950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_228
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 109
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4dcf5b0e6558e746bd6d6ab305a2e48
+      internalID: -949044081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_229
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 109
+        width: 26
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06667e2df98b38d47bba15a95049e559
+      internalID: 390608497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_230
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 109
+        width: 26
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef09916ce3fe1a64c91e19ebfe271ee9
+      internalID: -1287039237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_231
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 108
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6dba4e435e42d04a893b1a947d6ff48
+      internalID: 1811182971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_232
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 110
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3de6116dedb6bfd4e8a73869794ab095
+      internalID: -425809912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_233
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 110
+        width: 19
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 048544574fc9b60449ab7f20a1aca8f9
+      internalID: -799657238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_234
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 109
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b095257a8b623aa488a08c272a7a69c7
+      internalID: 830001989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_235
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 109
+        width: 25
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0b2005778caf9a459b20f8b05f00825
+      internalID: -868223464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_236
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 109
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a958691fb73db7346959decaadbd0a0c
+      internalID: -122274307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_237
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 108
+        width: 19
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9596ef30b9ec328459b89f0a768c9738
+      internalID: 1707417744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_238
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 110
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91304b07c8363ef4998b20e4cffb9891
+      internalID: 2111226432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_239
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 110
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 353d84f9e9f31c34da10a69ec5abb331
+      internalID: -971374972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_240
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 109
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4c13f8777beca548b51559a655d6a89
+      internalID: -411276125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_241
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 109
+        width: 26
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b1a07d21d182ea4fb88199d644ba21d
+      internalID: -1210429543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_242
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 109
+        width: 26
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed0ff776e5d16ba4ba83a38771a1e080
+      internalID: 1003455456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_243
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 108
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 746172bc7566a8647b40b7b631982038
+      internalID: 1233704444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_244
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 74
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a926c646c8267b3469e1a20dcef26f97
+      internalID: 1162873596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_245
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 74
+        width: 19
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8cb38ed00318b9419e9da88efc7d533
+      internalID: 1031310036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_246
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 73
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88c38166d6e8d40479955cd8536d3266
+      internalID: 74215659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_247
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 73
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74653bdf7c52c044098e957ca4a0b978
+      internalID: -931825722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_248
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 73
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7b7f3c29b3040b41ae6a21231924855
+      internalID: 1425397424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_249
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 73
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e11522ea117b1f0429f75102eb858a08
+      internalID: 204213083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_250
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 73
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55a3f234bd5529d449a4e77d7457c574
+      internalID: 1478047321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_251
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 73
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 889ec3de6d8aca844adf35773516655d
+      internalID: 225865417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_252
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 73
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a92080db70f17d4438d57abc636b3324
+      internalID: 59407260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_253
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 73
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30c114dea23eb014589bcb3745e554c8
+      internalID: 356110952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_254
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 73
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ae16a0670e6c3740a22fda58df893f1
+      internalID: -1114632003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_255
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 73
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23a109f316b7c134bb2e152027ac7a64
+      internalID: 2112489654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_256
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 73
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b08cd602baeffd44ea320424906b6c61
+      internalID: 1303659451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_257
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 73
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1294f992b41f69e4aaa323a674a7300d
+      internalID: -655283213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_258
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 73
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd2a7f7c06af91c45bb2e4a61ca59cac
+      internalID: -1708139653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_259
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 73
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f97706927ba28e41813bad10fa282cc
+      internalID: 1290485769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_260
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 73
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fdeaf79559883447a8581a69fd567a2
+      internalID: -1216483744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_261
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 73
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c5255a3a0c9cb84dab71d39d265912f
+      internalID: 1560094251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_262
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 73
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70f4b149d72588a429c4a65ff29e0693
+      internalID: 1351014371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_263
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 73
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42003712dc39485439179ef87828aeb9
+      internalID: -36235559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_264
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 73
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48fee331a3ff0704d8eabdec786fd985
+      internalID: 897404280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_265
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 73
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eadff2c6d1ebe6459bc5f93588bee15
+      internalID: 43713383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_266
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 73
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 091aff66f00121c4880c21698364f312
+      internalID: -267665241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_267
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 73
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a215cff8da5df354a95dc57cbd245895
+      internalID: 1133161950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_268
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 73
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c718355bbdaf544c8c77e02259d1d20
+      internalID: -330409537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_269
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 73
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef4f675758fcc8146a607395cc2258d4
+      internalID: -563861791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_270
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 39
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 293b079debdf8874b9de065879a58058
+      internalID: 1911139012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_271
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 38
+        width: 15
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 647de301c2d8c294297d1a4a1985086b
+      internalID: -1334653415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_272
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 38
+        width: 15
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3464e7fd1e5a6c94291f03265a292336
+      internalID: 23826313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_273
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 39
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74525a130b9795643ba1b80f13b7a2d2
+      internalID: -1607708195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_274
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 38
+        width: 15
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33b588bf4b0d8fb43a4a5077adea22d4
+      internalID: 947406798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_275
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 38
+        width: 15
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 574fd1e05f9f00543b461aa49d93e3d4
+      internalID: 677546754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_276
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 39
+        width: 19
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 892abf73d8a93504f832b1442088f584
+      internalID: 1840127140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_277
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 38
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f942d54c145c248419efc88c81f6f5eb
+      internalID: 975255143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_278
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 38
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fd8649bf3c31584bb84a68926527218
+      internalID: -573166816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_279
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 39
+        width: 19
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cca048f1c1397547a37dcba98745f56
+      internalID: -1931986773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_280
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 38
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7a8b9ee7b734204e86e3f76f562de56
+      internalID: -1375111332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_281
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 38
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdcf59e9c42062f4188df78a3a5771b7
+      internalID: 1936041885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_282
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 39
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8036d4b3655e7bd48892679bcdada30e
+      internalID: 1493516810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_283
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 38
+        width: 15
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7f2621ca83ca7f41aca061943d4d966
+      internalID: 1465152100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_284
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 38
+        width: 15
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 542f80db045bd17499347545fff8d6ea
+      internalID: 1837658811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_285
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 39
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d9a2b76cf5782049b5fc7c21da5b512
+      internalID: 467185016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_286
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 38
+        width: 15
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6a62363115f8044a82456bf717d9254
+      internalID: -881091043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_287
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 38
+        width: 15
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf954d77d0d873040955fdb1c03238ee
+      internalID: 101524062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_288
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 39
+        width: 19
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a03ad9d85d82704aac6df3f42010230
+      internalID: -1253814205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_289
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 38
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64512e2c8d0593748b523e859dc8aa3d
+      internalID: 7823223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_290
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 38
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52010b85d636e654c882cad4493e23a3
+      internalID: -866703548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_291
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 39
+        width: 19
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b9a13fee334cc342a3984a0069dbaeb
+      internalID: 839986957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_292
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 38
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 342d9b03f8b917746a8fc6a03ffc4805
+      internalID: 256270309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HaanitSpriteSheet_293
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 38
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b9c8171ba108ba489a94085e619fc48
+      internalID: -1883230676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      HaanitSpriteSheet_0: -1516484389
+      HaanitSpriteSheet_1: 1871813322
+      HaanitSpriteSheet_10: -283041682
+      HaanitSpriteSheet_100: 1506325730
+      HaanitSpriteSheet_101: 1059145458
+      HaanitSpriteSheet_102: -1519183640
+      HaanitSpriteSheet_103: -722452129
+      HaanitSpriteSheet_104: 946816506
+      HaanitSpriteSheet_105: -1264068066
+      HaanitSpriteSheet_106: 1945004670
+      HaanitSpriteSheet_107: 703772729
+      HaanitSpriteSheet_108: 1468445886
+      HaanitSpriteSheet_109: -1589745157
+      HaanitSpriteSheet_11: 1705543772
+      HaanitSpriteSheet_110: 144114887
+      HaanitSpriteSheet_111: -1371006031
+      HaanitSpriteSheet_112: -2059913037
+      HaanitSpriteSheet_113: 1865217361
+      HaanitSpriteSheet_114: -1252183343
+      HaanitSpriteSheet_115: 782305344
+      HaanitSpriteSheet_116: -516091882
+      HaanitSpriteSheet_117: -762650074
+      HaanitSpriteSheet_118: 1303315723
+      HaanitSpriteSheet_119: 1188607619
+      HaanitSpriteSheet_12: -1031098033
+      HaanitSpriteSheet_120: -550374992
+      HaanitSpriteSheet_121: 2123771344
+      HaanitSpriteSheet_122: 1744638733
+      HaanitSpriteSheet_123: 1217248410
+      HaanitSpriteSheet_124: -446028618
+      HaanitSpriteSheet_125: 2112640645
+      HaanitSpriteSheet_126: -564087810
+      HaanitSpriteSheet_127: 1782602324
+      HaanitSpriteSheet_128: 1980016309
+      HaanitSpriteSheet_129: 1229676884
+      HaanitSpriteSheet_13: -1317641241
+      HaanitSpriteSheet_130: -1123447077
+      HaanitSpriteSheet_131: -595292556
+      HaanitSpriteSheet_132: -1915019900
+      HaanitSpriteSheet_133: -597957302
+      HaanitSpriteSheet_134: -1671043376
+      HaanitSpriteSheet_135: -244210785
+      HaanitSpriteSheet_136: 503441759
+      HaanitSpriteSheet_137: 1124743155
+      HaanitSpriteSheet_138: 1339177060
+      HaanitSpriteSheet_139: 1390341705
+      HaanitSpriteSheet_14: -1727623495
+      HaanitSpriteSheet_140: -295074817
+      HaanitSpriteSheet_141: -712919649
+      HaanitSpriteSheet_142: -1801127777
+      HaanitSpriteSheet_143: -141083725
+      HaanitSpriteSheet_144: -1564403033
+      HaanitSpriteSheet_145: 21190720
+      HaanitSpriteSheet_146: -1550531025
+      HaanitSpriteSheet_147: -2011101883
+      HaanitSpriteSheet_148: 1897207933
+      HaanitSpriteSheet_149: -1983695220
+      HaanitSpriteSheet_15: -409503973
+      HaanitSpriteSheet_150: 699955373
+      HaanitSpriteSheet_151: -1972391538
+      HaanitSpriteSheet_152: -1698620221
+      HaanitSpriteSheet_153: 1681007257
+      HaanitSpriteSheet_154: 33968589
+      HaanitSpriteSheet_155: -778544683
+      HaanitSpriteSheet_156: -252527883
+      HaanitSpriteSheet_157: 836502744
+      HaanitSpriteSheet_158: -273228039
+      HaanitSpriteSheet_159: 626736043
+      HaanitSpriteSheet_16: -836844766
+      HaanitSpriteSheet_160: 548114119
+      HaanitSpriteSheet_161: 793187702
+      HaanitSpriteSheet_162: 1551781635
+      HaanitSpriteSheet_163: -1369783798
+      HaanitSpriteSheet_164: -125243514
+      HaanitSpriteSheet_165: -1888926391
+      HaanitSpriteSheet_166: 1697018392
+      HaanitSpriteSheet_167: -913196830
+      HaanitSpriteSheet_168: 798937128
+      HaanitSpriteSheet_169: 945241087
+      HaanitSpriteSheet_17: -599161124
+      HaanitSpriteSheet_170: 1066923242
+      HaanitSpriteSheet_171: -326645193
+      HaanitSpriteSheet_172: -854427673
+      HaanitSpriteSheet_173: -1717389171
+      HaanitSpriteSheet_174: -219161502
+      HaanitSpriteSheet_175: 153451538
+      HaanitSpriteSheet_176: 247012584
+      HaanitSpriteSheet_177: -477209933
+      HaanitSpriteSheet_178: 1253381647
+      HaanitSpriteSheet_179: -1626329055
+      HaanitSpriteSheet_18: -2136917536
+      HaanitSpriteSheet_180: -2084641898
+      HaanitSpriteSheet_181: 1379332360
+      HaanitSpriteSheet_182: 989218554
+      HaanitSpriteSheet_183: 888077750
+      HaanitSpriteSheet_184: -699999483
+      HaanitSpriteSheet_185: 945920082
+      HaanitSpriteSheet_186: 1844370310
+      HaanitSpriteSheet_187: 1120432364
+      HaanitSpriteSheet_188: -767412287
+      HaanitSpriteSheet_189: 1455300222
+      HaanitSpriteSheet_19: -1690095256
+      HaanitSpriteSheet_190: -1432713142
+      HaanitSpriteSheet_191: -1506951075
+      HaanitSpriteSheet_192: 1037584091
+      HaanitSpriteSheet_193: 948954480
+      HaanitSpriteSheet_194: 438502902
+      HaanitSpriteSheet_195: -503202573
+      HaanitSpriteSheet_196: 722526691
+      HaanitSpriteSheet_197: 75692833
+      HaanitSpriteSheet_198: 750705526
+      HaanitSpriteSheet_199: 510417425
+      HaanitSpriteSheet_2: 819896810
+      HaanitSpriteSheet_20: -387581241
+      HaanitSpriteSheet_200: -623421002
+      HaanitSpriteSheet_201: 1438210729
+      HaanitSpriteSheet_202: -2131427840
+      HaanitSpriteSheet_203: -9352130
+      HaanitSpriteSheet_204: -1622336999
+      HaanitSpriteSheet_205: 823055696
+      HaanitSpriteSheet_206: 2139086989
+      HaanitSpriteSheet_207: 135927
+      HaanitSpriteSheet_208: -890464909
+      HaanitSpriteSheet_209: -1104890899
+      HaanitSpriteSheet_21: -1900790434
+      HaanitSpriteSheet_210: -1769437647
+      HaanitSpriteSheet_211: 1518241141
+      HaanitSpriteSheet_212: -1683665023
+      HaanitSpriteSheet_213: 1160631056
+      HaanitSpriteSheet_214: -571368139
+      HaanitSpriteSheet_215: 1227382820
+      HaanitSpriteSheet_216: 1160625400
+      HaanitSpriteSheet_217: -998327998
+      HaanitSpriteSheet_218: -1686208391
+      HaanitSpriteSheet_219: -894487533
+      HaanitSpriteSheet_22: -1816709930
+      HaanitSpriteSheet_220: 841291983
+      HaanitSpriteSheet_221: 1173019331
+      HaanitSpriteSheet_222: 911654898
+      HaanitSpriteSheet_223: -1987273214
+      HaanitSpriteSheet_224: 1105882294
+      HaanitSpriteSheet_225: 229739283
+      HaanitSpriteSheet_226: 1024111558
+      HaanitSpriteSheet_227: -1886667950
+      HaanitSpriteSheet_228: -949044081
+      HaanitSpriteSheet_229: 390608497
+      HaanitSpriteSheet_23: -1877850705
+      HaanitSpriteSheet_230: -1287039237
+      HaanitSpriteSheet_231: 1811182971
+      HaanitSpriteSheet_232: -425809912
+      HaanitSpriteSheet_233: -799657238
+      HaanitSpriteSheet_234: 830001989
+      HaanitSpriteSheet_235: -868223464
+      HaanitSpriteSheet_236: -122274307
+      HaanitSpriteSheet_237: 1707417744
+      HaanitSpriteSheet_238: 2111226432
+      HaanitSpriteSheet_239: -971374972
+      HaanitSpriteSheet_24: -141114054
+      HaanitSpriteSheet_240: -411276125
+      HaanitSpriteSheet_241: -1210429543
+      HaanitSpriteSheet_242: 1003455456
+      HaanitSpriteSheet_243: 1233704444
+      HaanitSpriteSheet_244: 1162873596
+      HaanitSpriteSheet_245: 1031310036
+      HaanitSpriteSheet_246: 74215659
+      HaanitSpriteSheet_247: -931825722
+      HaanitSpriteSheet_248: 1425397424
+      HaanitSpriteSheet_249: 204213083
+      HaanitSpriteSheet_25: 1452908784
+      HaanitSpriteSheet_250: 1478047321
+      HaanitSpriteSheet_251: 225865417
+      HaanitSpriteSheet_252: 59407260
+      HaanitSpriteSheet_253: 356110952
+      HaanitSpriteSheet_254: -1114632003
+      HaanitSpriteSheet_255: 2112489654
+      HaanitSpriteSheet_256: 1303659451
+      HaanitSpriteSheet_257: -655283213
+      HaanitSpriteSheet_258: -1708139653
+      HaanitSpriteSheet_259: 1290485769
+      HaanitSpriteSheet_26: 1904813318
+      HaanitSpriteSheet_260: -1216483744
+      HaanitSpriteSheet_261: 1560094251
+      HaanitSpriteSheet_262: 1351014371
+      HaanitSpriteSheet_263: -36235559
+      HaanitSpriteSheet_264: 897404280
+      HaanitSpriteSheet_265: 43713383
+      HaanitSpriteSheet_266: -267665241
+      HaanitSpriteSheet_267: 1133161950
+      HaanitSpriteSheet_268: -330409537
+      HaanitSpriteSheet_269: -563861791
+      HaanitSpriteSheet_27: -1880101833
+      HaanitSpriteSheet_270: 1911139012
+      HaanitSpriteSheet_271: -1334653415
+      HaanitSpriteSheet_272: 23826313
+      HaanitSpriteSheet_273: -1607708195
+      HaanitSpriteSheet_274: 947406798
+      HaanitSpriteSheet_275: 677546754
+      HaanitSpriteSheet_276: 1840127140
+      HaanitSpriteSheet_277: 975255143
+      HaanitSpriteSheet_278: -573166816
+      HaanitSpriteSheet_279: -1931986773
+      HaanitSpriteSheet_28: -1337665299
+      HaanitSpriteSheet_280: -1375111332
+      HaanitSpriteSheet_281: 1936041885
+      HaanitSpriteSheet_282: 1493516810
+      HaanitSpriteSheet_283: 1465152100
+      HaanitSpriteSheet_284: 1837658811
+      HaanitSpriteSheet_285: 467185016
+      HaanitSpriteSheet_286: -881091043
+      HaanitSpriteSheet_287: 101524062
+      HaanitSpriteSheet_288: -1253814205
+      HaanitSpriteSheet_289: 7823223
+      HaanitSpriteSheet_29: -987125414
+      HaanitSpriteSheet_290: -866703548
+      HaanitSpriteSheet_291: 839986957
+      HaanitSpriteSheet_292: 256270309
+      HaanitSpriteSheet_293: -1883230676
+      HaanitSpriteSheet_3: -296380352
+      HaanitSpriteSheet_30: 1696614905
+      HaanitSpriteSheet_31: -1378691149
+      HaanitSpriteSheet_32: 1349460822
+      HaanitSpriteSheet_33: 1399389887
+      HaanitSpriteSheet_34: 1234016175
+      HaanitSpriteSheet_35: 449863933
+      HaanitSpriteSheet_36: -1197682533
+      HaanitSpriteSheet_37: 1392836174
+      HaanitSpriteSheet_38: -792592504
+      HaanitSpriteSheet_39: -545269725
+      HaanitSpriteSheet_4: -1354996010
+      HaanitSpriteSheet_40: -1669437176
+      HaanitSpriteSheet_41: -1129998858
+      HaanitSpriteSheet_42: -830337597
+      HaanitSpriteSheet_43: -1561427587
+      HaanitSpriteSheet_44: 686861860
+      HaanitSpriteSheet_45: -1094067296
+      HaanitSpriteSheet_46: 1205538413
+      HaanitSpriteSheet_47: -2046164672
+      HaanitSpriteSheet_48: -874456372
+      HaanitSpriteSheet_49: 1063870284
+      HaanitSpriteSheet_5: 1605417468
+      HaanitSpriteSheet_50: -945691374
+      HaanitSpriteSheet_51: -1363954167
+      HaanitSpriteSheet_52: 269419118
+      HaanitSpriteSheet_53: -1566996985
+      HaanitSpriteSheet_54: -1050178836
+      HaanitSpriteSheet_55: 1042758688
+      HaanitSpriteSheet_56: 680835011
+      HaanitSpriteSheet_57: -89818494
+      HaanitSpriteSheet_58: -263197213
+      HaanitSpriteSheet_59: 1237786422
+      HaanitSpriteSheet_6: 1803586473
+      HaanitSpriteSheet_60: -960332646
+      HaanitSpriteSheet_61: 1781988156
+      HaanitSpriteSheet_62: 59479876
+      HaanitSpriteSheet_63: 501514346
+      HaanitSpriteSheet_64: -896770596
+      HaanitSpriteSheet_65: -108013614
+      HaanitSpriteSheet_66: -2061802642
+      HaanitSpriteSheet_67: -327784791
+      HaanitSpriteSheet_68: 229588854
+      HaanitSpriteSheet_69: 1867780494
+      HaanitSpriteSheet_7: 1951932907
+      HaanitSpriteSheet_70: -1027750430
+      HaanitSpriteSheet_71: -344535554
+      HaanitSpriteSheet_72: -1779366046
+      HaanitSpriteSheet_73: 690627418
+      HaanitSpriteSheet_74: -498891199
+      HaanitSpriteSheet_75: 274088233
+      HaanitSpriteSheet_76: 1591050659
+      HaanitSpriteSheet_77: -1187519910
+      HaanitSpriteSheet_78: 261917949
+      HaanitSpriteSheet_79: -1458292431
+      HaanitSpriteSheet_8: 1472095666
+      HaanitSpriteSheet_80: 1180880476
+      HaanitSpriteSheet_81: -389577393
+      HaanitSpriteSheet_82: 1095208604
+      HaanitSpriteSheet_83: -515744663
+      HaanitSpriteSheet_84: 1238204498
+      HaanitSpriteSheet_85: -933149493
+      HaanitSpriteSheet_86: -75828682
+      HaanitSpriteSheet_87: -554124371
+      HaanitSpriteSheet_88: 286077514
+      HaanitSpriteSheet_89: 1939464050
+      HaanitSpriteSheet_9: 1067613707
+      HaanitSpriteSheet_90: -2111497355
+      HaanitSpriteSheet_91: 1185875405
+      HaanitSpriteSheet_92: -1912153443
+      HaanitSpriteSheet_93: 1235748343
+      HaanitSpriteSheet_94: 353275450
+      HaanitSpriteSheet_95: -722251245
+      HaanitSpriteSheet_96: 1239635141
+      HaanitSpriteSheet_97: 1830569698
+      HaanitSpriteSheet_98: 1354795687
+      HaanitSpriteSheet_99: 1974582123
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

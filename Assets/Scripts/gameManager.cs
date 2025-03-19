@@ -35,7 +35,6 @@ public class gameManager : MonoBehaviour
     public void SpawnPlayers()
     {
         //players.Clear(); // Clear any previous player data
-        Debug.Log("Spawning " + playerCount + " players");
         for (int i = 0; i < playerCount; i++)
         {
             if (i >= spawnPoints.Length) 
@@ -49,8 +48,6 @@ public class gameManager : MonoBehaviour
 
         playerScript.playerIDnumber = i + 1; // Assign ID based on spawn order
         AddPlayer(playerScript); // Register player in GameManager
-
-        Debug.Log("Spawned Player " + playerScript.playerIDnumber);
         }
     }
 }

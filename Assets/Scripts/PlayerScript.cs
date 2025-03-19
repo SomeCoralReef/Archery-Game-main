@@ -22,6 +22,8 @@ public class PlayerScript : MonoBehaviour
     public float speed;
     public float jumpForce;
     private Rigidbody2D rb;
+    private SpriteRenderer sr;
+    Animator animator;
     private bool isGrounded;
     private float moveInput;
     private int lastDashInputDirection;
@@ -86,6 +88,8 @@ public class PlayerScript : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        sr = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
         SetupCircle();
         InitializeInputs();
     }
@@ -99,11 +103,7 @@ public class PlayerScript : MonoBehaviour
 
     public void SetInputMethod(string inputMethod)
     {
-       // if (playerInput != null)
-       // {
-       //     playerInput.SwitchCurrentControlScheme(inputMethod);
-       //     Debug.Log("Player" + playerIDnumber + " has joined using " + inputMethod);
-       // }
+
     }
     
     void AssignPlayerLayer()
@@ -246,32 +246,19 @@ public class PlayerScript : MonoBehaviour
         
         //assign the Arrow to the arrow
         arrow.layer = arrowLayerNumber;
-        arrow.GetComponent<ArrowScript>().playerIDnumber = playerIDnumber;
+        ArrowScript arrowScript = arrow.GetComponent<ArrowScript>();
+        arrowScript.SetShooter(gameObject);
         Rigidbody2D arrowRb = arrow.GetComponent<Rigidbody2D>();
         float angle = Mathf.Atan2(shootDirection.y, shootDirection.x) * Mathf.Rad2Deg;
         arrow.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
         arrowRb.AddForce(shootDirection * 25f, ForceMode2D.Impulse); // Use a constant force magnitude
     }
 
-    void FixedUpdate()
-    {
-        Move();
-        /*if (jumpRequest)
-        {
-            Jump();
-            jumpRequest = false;
-        }
-        if (dashDirection != 0)
-        {
-            Dash(dashDirection);
-            dashDirection = 0;
-        }*/
-    }
+
     
     // handling arrow up
     void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log("Player" + playerIDnumber + " collided with " + col.name);
         if(col.CompareTag("Arrow") && (currentNumberofArrows < maxNumberofArrows))
         {
             HandleArrowPickUp(col.gameObject);
@@ -287,16 +274,33 @@ public class PlayerScript : MonoBehaviour
             currentNumberofArrows++;
         }
     }
+
+    void FixedUpdate()
+    {
+        Move();
+    }
+
     
     private void Move()
     {
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+        animator.SetFloat("xVelocity", Mathf.Abs(rb.velocity.x));
+        animator.SetFloat("yVelocity", rb.velocity.y);
+        if(moveInput > 0)
+        {
+            sr.flipX = true;
+        }
+        else if(moveInput < 0)
+        {
+            sr.flipX = false;
+        }
     }
 
     private void OnMove(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<float>();
     }
+
 
     private void OnDash(InputAction.CallbackContext context)
     {
@@ -305,7 +309,6 @@ public class PlayerScript : MonoBehaviour
         if (lastDashInputDirection == currentDashInputDir)
         {
             Dash(currentDashInputDir);
-            Debug.Log("Dash");
         }
         lastDashInputDirection = currentDashInputDir;
     }
@@ -314,28 +317,23 @@ public class PlayerScript : MonoBehaviour
     {
         if (isGrounded)
         {
+            animator.SetBool("isJumping", true);
             rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
         }
     }
 
-    public void TakeDamage()
+    public void TakeDamage(Vector2 hitDirection)
     {
         Invoke("Die", 3f);
+        OnDisable();
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         rb.velocity = Vector2.zero;
-        rb.AddForce(Vector2.right * 10f, ForceMode2D.Impulse);
-    }
-    
-    private void Shoot()
-    {
-        GameObject arrow = Instantiate(arrowPrefab, transform.position, Quaternion.identity);
-        Rigidbody2D arrowRb = arrow.GetComponent<Rigidbody2D>();
-        arrowRb.AddForce(Vector2.right * 20f, ForceMode2D.Impulse); // Example direction
+        rb.AddForce(hitDirection.normalized * 200f, ForceMode2D.Impulse);
+        sr.color = Color.red;
     }
 
     private void Dash(int direction)
     {
-        Debug.Log("Dash fired with direction: " + direction);
         Vector2 dashForce = new Vector2(dashSpeed * direction, 0);
         rb.AddForce(dashForce, ForceMode2D.Impulse);
         lastDashTime = Time.time;
@@ -351,6 +349,7 @@ public class PlayerScript : MonoBehaviour
                 if (contact.normal.y > 0.5f) // Adjust this threshold if needed
                 {
                     isGrounded = true;
+                    animator.SetBool("isJumping", false);
                     return;
                 }
             }
