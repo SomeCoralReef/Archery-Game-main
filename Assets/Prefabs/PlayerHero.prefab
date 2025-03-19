@@ -355,12 +355,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerIDnumber: 0
   speed: 5
+  deceleration: 5
   jumpForce: 5
+  jumpTimeLimit: 0.3
   maxNumberofArrows: 3
   currentNumberofArrows: 2
-  dashSpeed: 300
-  doubleTapTime: 0.2
+  dashSpeed: 30
   dashCooldown: 0.5
+  dashTime: 0.1
   circleRenderer: {fileID: 847668677518556302}
   directionRenderer: {fileID: 1984944449083791674}
   circleSegments: 50
