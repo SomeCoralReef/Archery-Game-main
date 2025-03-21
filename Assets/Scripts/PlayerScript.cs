@@ -12,6 +12,9 @@ using UnityEngine.InputSystem.Users;
 public class PlayerScript : MonoBehaviour
 {
     private ArcheryInputs inputs;
+    private InputActionAsset inputAsset;
+    private InputActionMap player;
+    private InputAction move;
     
     //This needs to be set up dynamically : i.e the playerIDnumber; 
     [Header("Player Set Up")]
@@ -40,7 +43,7 @@ public class PlayerScript : MonoBehaviour
     private int maxNumberofArrows = 3;
 
     [SerializeField]
-    private int currentNumberofArrows = 2;
+    public int currentNumberofArrows = 2;
 
    [Header("Arrow Variables")]
     public float dashSpeed = 10f;
@@ -93,14 +96,23 @@ public class PlayerScript : MonoBehaviour
         inputs.Player.Shoot.canceled += OnFire;
     }
 
+    private void AssignControls()
+    {
+
+    }
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+        inputAsset = this.GetComponent<PlayerInput>().actions;
+        player = inputAsset.FindActionMap("Player");
         SetupCircle();
         InitializeInputs();
+
     }
+
 
 
     void Start()
@@ -109,10 +121,7 @@ public class PlayerScript : MonoBehaviour
         AssignPlayerLayer();
     }
 
-    public void SetInputMethod(string inputMethod)
-    {
 
-    }
     
     void AssignPlayerLayer()
     {

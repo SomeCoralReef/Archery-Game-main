@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+
 
 public class gameManager : MonoBehaviour
 {
@@ -27,10 +29,9 @@ public class gameManager : MonoBehaviour
     {
         players.Add(player);
     }
-
     void Start()
     {
-        SpawnPlayers();
+        //SpawnPlayers();
     }
     public void SpawnPlayers()
     {
