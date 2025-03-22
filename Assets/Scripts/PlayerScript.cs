@@ -94,6 +94,7 @@ public class PlayerScript : MonoBehaviour
         inputs.Player.Jump.started += OnJump;
         inputs.Player.Jump.canceled += context => isJumping = false;
         inputs.Player.Shoot.canceled += OnFire;
+        inputs.Player.Aim.performed += context => {}; // Ensure Aim action is registered
     }
 
     private void AssignControls()
@@ -190,9 +191,27 @@ public class PlayerScript : MonoBehaviour
         // }
 
         // TODO: i woudnt use Camera.main, its better to directly ref the camera
+        
+        Vector2 joystickInput = inputs.Player.Aim.ReadValue<Vector2>();
+
+        Vector3 direction;
+        if (joystickInput.sqrMagnitude > 0.1f)  // Dead zone check to prevent unwanted movements
+        {
+            direction = new Vector3(joystickInput.x, joystickInput.y, 0).normalized;
+        }
+        else
+        {
+            // Default to mouse aiming when joystick is not in use
+            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+            mousePos.z = 0;
+            direction = (mousePos - transform.position).normalized;
+        }
+
+
+        /*
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue()); // Get mouse position (NEW INPUT SYSTEM)
         mousePos.z = 0;
-        Vector3 direction = (mousePos - transform.position).normalized;
+        Vector3 direction = (mousePos - transform.position).normalized;*/
 
         if (inputs.Player.Shoot.inProgress)
         {
