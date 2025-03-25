@@ -25,14 +25,17 @@ public class gameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    
     public void AddPlayer(PlayerScript player)
     {
         players.Add(player);
     }
+    
     void Start()
     {
         //SpawnPlayers();
     }
+    
     public void SpawnPlayers()
     {
         //players.Clear(); // Clear any previous player data
@@ -44,11 +47,11 @@ public class gameManager : MonoBehaviour
                 break;
             }
 
-        GameObject player = Instantiate(playerPrefab, spawnPoints[i].position, Quaternion.identity);
-        PlayerScript playerScript = player.GetComponent<PlayerScript>();
+            GameObject player = Instantiate(playerPrefab, spawnPoints[i].position, Quaternion.identity);
+            PlayerScript playerScript = player.GetComponent<PlayerScript>();
 
-        playerScript.playerIDnumber = i + 1; // Assign ID based on spawn order
-        AddPlayer(playerScript); // Register player in GameManager
+            playerScript.playerIDnumber = i + 1; // Assign ID based on spawn order
+            AddPlayer(playerScript); // Register player in GameManager
         }
     }
 }
