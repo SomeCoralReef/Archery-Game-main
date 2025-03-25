@@ -6,35 +6,53 @@ using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.UIElements;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Interactions;
+using UnityEngine.InputSystem.Users;
 
 public class PlayerScript : MonoBehaviour
 {
+    private ArcheryInputs archeryInputs;
+    // private InputActionAsset inputAsset;
+    // private InputActionMap player;
+    // private InputAction move;
+    
     //This needs to be set up dynamically : i.e the playerIDnumber; 
     [Header("Player Set Up")]
     public int playerIDnumber;
     
+    private PlayerInput playerInput;
+    private InputUser inputUser;
 
     [Header("PlayerSetup")]
     public float speed;
+    public float deceleration;
     public float jumpForce;
+    public float jumpTimeLimit;
     private Rigidbody2D rb;
+    private SpriteRenderer sr;
+    Animator animator;
+    private float jumpTimer;
     private bool isGrounded;
-    private Vector2 moveInput;
+    private bool isJumping;
+    private float moveInput;
+    private int lastDashInputDirection;
     
     [Header("Arrow Variables")]
     [SerializeField]
     private int maxNumberofArrows = 3;
 
     [SerializeField]
-    private int currentNumberofArrows = 2;
+    public int currentNumberofArrows = 2;
 
    [Header("Arrow Variables")]
     public float dashSpeed = 10f;
-    public float doubleTapTime;
     private float lastTapTime;
     private KeyCode lastKeyCode;
     public float dashCooldown = 1.0f;
     private float lastDashTime;
+    private bool isDashing;
+    public float dashTime = 0.1f;
+    int currentDashInputDir;
 
     [Header("Aiming Renderer")]
     public LineRenderer circleRenderer;
@@ -55,46 +73,61 @@ public class PlayerScript : MonoBehaviour
     public GameObject arrowPrefab;
 
     private string inputMethod; //stores input type
-    private PlayerInput playerInput;
 
+    private void OnEnable()
+    {
+        archeryInputs.Player.Enable();
+    }
+    
+    private void OnDisable()
+    {
+        archeryInputs.Player.Disable();
+    }
+
+    private void InitializeInputs()
+    {
+        archeryInputs = new ArcheryInputs();
+        playerInput = GetComponent<PlayerInput>();
+        inputUser = playerInput.user;
+        archeryInputs.asset.devices = playerInput.devices;
+        archeryInputs.Enable();
+        archeryInputs.Player.Move.performed += OnMove;
+        archeryInputs.Player.Move.canceled += context => moveInput = 0;
+        archeryInputs.Player.Dash.performed += OnDash;
+        archeryInputs.Player.Jump.started += OnJump;
+        archeryInputs.Player.Jump.canceled += context => isJumping = false;
+        archeryInputs.Player.Shoot.canceled += OnFire;
+        archeryInputs.Player.Aim.performed += context => {}; // Ensure Aim action is registered
+    }
+
+    private void AssignControls()
+    {   
+
+    }
+    void SetIntoChargeMode()
+    {
+        
+    }
     void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();      
-        playerInput = GetComponent<PlayerInput>();
-        SetupCircle();  
+        rb = GetComponent<Rigidbody2D>();
+        sr = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
+        SetupCircle();
+        InitializeInputs();
     }
+
 
 
     void Start()
     {
-        Dictionary<int,string> playerInputs = gameManager.instance.GetPlayerInputs();
-
-        if(playerInputs.TryGetValue(playerIDnumber, out string inputMethod))
-        {
-            Debug.Log("Player " + playerIDnumber + " has joined using " + inputMethod);
-            SetInputMethod(inputMethod);
-        } 
-        else 
-        {
-            Debug.LogError("Player " + playerIDnumber + " has not joined the game");
-        }
-
-        assignPlayerLayer();
-
+       
+        AssignPlayerLayer();
     }
 
-    public void SetInputMethod(string inputMethod)
-    {
-       if(playerInput != null)
-       {
-        playerInput.SwitchCurrentControlScheme(inputMethod);
-        Debug.Log("Player" + playerIDnumber + " has joined using " + inputMethod);
-       }
-    }
 
     
-
-    void assignPlayerLayer()
+    void AssignPlayerLayer()
     {
         string layerName = "Player" + playerIDnumber;
         int layerNumber = LayerMask.NameToLayer(layerName);
@@ -109,7 +142,6 @@ public class PlayerScript : MonoBehaviour
         }
     }
     
-
     void SetupCircle()
     {
         circleRenderer.positionCount = circleSegments + 1;
@@ -142,32 +174,49 @@ public class PlayerScript : MonoBehaviour
         directionRenderer.SetPosition(0, Vector3.zero);
         directionRenderer.SetPosition(1, direction * circleRadius);
     }
-
-
-    /*
+    
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        // if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        // {
+        //     jumpRequest = true;
+        // }
+        //
+        // if ((Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.A)) && (Time.time >= lastDashTime + dashCooldown))
+        // {
+        //     KeyCode currentKeyCode = Input.GetKeyDown(KeyCode.D) ? KeyCode.D : KeyCode.A;
+        //     if (currentKeyCode == lastKeyCode && (Time.time - lastTapTime) < doubleTapTime)
+        //     {
+        //         dashDirection = (currentKeyCode == KeyCode.D ? 1 : -1);
+        //     }
+        //     lastTapTime = Time.time;
+        //     lastKeyCode = currentKeyCode;
+        // }
+
+        // TODO: i woudnt use Camera.main, its better to directly ref the camera
+        
+        Vector2 joystickInput = archeryInputs.Player.Aim.ReadValue<Vector2>();
+
+        Vector3 direction;
+        if (joystickInput.sqrMagnitude > 0.1f)  // Dead zone check to prevent unwanted movements
         {
-            jumpRequest = true;
+            direction = new Vector3(joystickInput.x, joystickInput.y, 0).normalized;
+        }
+        else
+        {
+            // Default to mouse aiming when joystick is not in use
+            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+            mousePos.z = 0;
+            direction = (mousePos - transform.position).normalized;
         }
 
-        if ((Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.A)) && (Time.time >= lastDashTime + dashCooldown))
-        {
-            KeyCode currentKeyCode = Input.GetKeyDown(KeyCode.D) ? KeyCode.D : KeyCode.A;
-            if (currentKeyCode == lastKeyCode && (Time.time - lastTapTime) < doubleTapTime)
-            {
-                dashDirection = (currentKeyCode == KeyCode.D ? 1 : -1);
-            }
-            lastTapTime = Time.time;
-            lastKeyCode = currentKeyCode;
-        }
 
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        /*
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue()); // Get mouse position (NEW INPUT SYSTEM)
         mousePos.z = 0;
-        Vector3 direction = (mousePos - transform.position).normalized;
+        Vector3 direction = (mousePos - transform.position).normalized;*/
 
-        if (Input.GetMouseButton(0))
+        if (archeryInputs.Player.Shoot.inProgress)
         {
             holdTime += Time.deltaTime;
             circleRenderer.enabled = true;
@@ -175,19 +224,19 @@ public class PlayerScript : MonoBehaviour
             directionRenderer.enabled = true;
             reducedcircleRadius = circleRadius - maxAimingDistance;
             float angleOffset = Mathf.Rad2Deg * (1f / reducedcircleRadius);  // angle in degrees
-
+            
             // Base position directly in the direction of the mouse
             Vector3 basePosition = direction * reducedcircleRadius;
-
+            
             // Rotated positions for aiming circles
             Vector3 initialPos1 = Quaternion.Euler(0, 0, angleOffset) * basePosition;
             Vector3 initialPos2 = Quaternion.Euler(0, 0, -angleOffset) * basePosition;
-
+            
             // Calculate convergence towards the base position
             float convergence = Mathf.Lerp(0, 1, holdTime / holdTimeToMaxAccuracy);
             Vector3 finalPos1 = Vector3.Lerp(initialPos1, basePosition, convergence);
             Vector3 finalPos2 = Vector3.Lerp(initialPos2, basePosition, convergence);
-
+            
             aimingCircle1.position = transform.position + finalPos1;
             aimingCircle2.position = transform.position + finalPos2;
         }
@@ -197,16 +246,40 @@ public class PlayerScript : MonoBehaviour
             circleRenderer.enabled = false;
             directionRenderer.enabled = false;
         }
-        if(Input.GetMouseButtonUp(0) && currentNumberofArrows > 0)
-        {
-            currentNumberofArrows--;
-            Shoot(direction,playerIDnumber);
-        }
-    }*/
-    
-    void Shoot(Vector3 direction, int playerIDnumber)
-    {
         
+        // TODO: old shoot
+        // if(Input.GetMouseButtonUp(0) && currentNumberofArrows > 0)
+        // {
+        //     currentNumberofArrows--;
+        //     Shoot(direction,playerIDnumber);
+        // }
+
+        if (archeryInputs.Player.Jump.inProgress && isJumping)
+        {
+            if (jumpTimer > 0)
+            {
+                rb.velocity = Vector2.up * jumpForce;
+                jumpTimer -= Time.deltaTime;
+            }
+            else
+            {
+                isJumping = false;
+            }
+        }
+    }
+
+    
+    private void OnFire(InputAction.CallbackContext context)
+    {
+        if(currentNumberofArrows > 0)
+        {
+            Shoot2(playerIDnumber);
+            currentNumberofArrows--;
+        }
+    }
+    
+    void Shoot2(int playerIDnumber)
+    {
         // Get positions relative to the player
         Vector3 pos1 = aimingCircle1.position - transform.position;
         Vector3 pos2 = aimingCircle2.position - transform.position;
@@ -225,27 +298,20 @@ public class PlayerScript : MonoBehaviour
         
         //assign the Arrow to the arrow
         arrow.layer = arrowLayerNumber;
-        
+        ArrowScript arrowScript = arrow.GetComponent<ArrowScript>();
+        arrowScript.SetShooter(gameObject);
         Rigidbody2D arrowRb = arrow.GetComponent<Rigidbody2D>();
         float angle = Mathf.Atan2(shootDirection.y, shootDirection.x) * Mathf.Rad2Deg;
         arrow.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
         arrowRb.AddForce(shootDirection * 25f, ForceMode2D.Impulse); // Use a constant force magnitude
     }
 
+
     void FixedUpdate()
     {
         Move();
-        /*if (jumpRequest)
-        {
-            Jump();
-            jumpRequest = false;
-        }
-        if (dashDirection != 0)
-        {
-            Dash(dashDirection);
-            dashDirection = 0;
-        }*/
     }
+    
     // handling arrow up
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -263,44 +329,78 @@ public class PlayerScript : MonoBehaviour
             Destroy(arrow);
             currentNumberofArrows++;
         }
-        Debug.Log("Arrow Picked Up");
-    }
-    void Move()
-    {
-        rb.velocity = new Vector2(moveInput.x * speed, rb.velocity.y);
     }
 
-    public void OnMove(InputAction.CallbackContext context)
-    {
-        moveInput = context.ReadValue<Vector2>();
-    }
 
-    public void OnJump(InputAction.CallbackContext context)
+    
+    private void Move()
     {
-        if (context.started && isGrounded)
+        animator.SetFloat("xVelocity", Mathf.Abs(rb.velocity.x));
+        animator.SetFloat("yVelocity", rb.velocity.y);
+        if (moveInput > 0)
         {
+            sr.flipX = true;
+        }
+        else if (moveInput < 0)
+        {
+            sr.flipX = false;
+        }
+        if (moveInput != 0)
+        {
+            rb.velocity = isDashing ? new Vector2(moveInput * dashSpeed, 0) :
+                new Vector2(moveInput * speed, rb.velocity.y);
+        }
+        else
+        {
+            rb.velocity = Vector2.Lerp(rb.velocity, new Vector2(0, rb.velocity.y), deceleration * Time.fixedDeltaTime);
+        }
+    }
+
+    private void OnMove(InputAction.CallbackContext context)
+    {
+        moveInput = context.ReadValue<float>();
+    }
+
+
+    private void OnDash(InputAction.CallbackContext context)
+    {
+        if (lastDashTime + dashCooldown < Time.time)
+        {
+            Dash(currentDashInputDir);
+            isDashing = true;
+            lastDashTime = Time.time;
+            Invoke("ResetDash", dashTime);
+        }
+    }
+
+    private void ResetDash()
+    {
+        isDashing = false;
+    }
+
+    private void OnJump(InputAction.CallbackContext context)
+    {
+        if (isGrounded)
+        {
+            animator.SetBool("isJumping", true);
             rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+            jumpTimer = jumpTimeLimit;
+            isJumping = true;
+            rb.velocity = Vector2.up * jumpForce;
         }
     }
 
-    public void OnFire(InputAction.CallbackContext context)
+    public void TakeDamage(Vector2 hitDirection)
     {
-        if(context.performed && currentNumberofArrows > 0)
-        {
-            Shoot();
-            currentNumberofArrows--;
-        }
+        Invoke("Die", 3f);
+        OnDisable();
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        rb.velocity = Vector2.zero;
+        rb.AddForce(hitDirection.normalized * 200f, ForceMode2D.Impulse);
+        sr.color = Color.red;
     }
 
-
-    void Shoot()
-    {
-        GameObject arrow = Instantiate(arrowPrefab, transform.position, Quaternion.identity);
-        Rigidbody2D arrowRb = arrow.GetComponent<Rigidbody2D>();
-        arrowRb.AddForce(Vector2.right * 20f, ForceMode2D.Impulse); // Example direction
-    }
-
-    void Dash(int direction)
+    private void Dash(int direction)
     {
         Vector2 dashForce = new Vector2(dashSpeed * direction, 0);
         rb.AddForce(dashForce, ForceMode2D.Impulse);
@@ -316,8 +416,8 @@ public class PlayerScript : MonoBehaviour
             {
                 if (contact.normal.y > 0.5f) // Adjust this threshold if needed
                 {
-                    Debug.Log(contact + "normal.y > 0.5");
                     isGrounded = true;
+                    animator.SetBool("isJumping", false);
                     return;
                 }
             }

@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 
 public class ArrowScript : MonoBehaviour
 {
     private Rigidbody2D rb;
     private bool hasHit = false;
-
     public bool isStuck = false;
+    private GameObject shooter;
 
     Vector3 startingScale;
     // Start is called before the first frame update
@@ -19,7 +21,17 @@ public class ArrowScript : MonoBehaviour
         hasHit = false;
         startingScale = transform.localScale;
     }
+    public void SetShooter(GameObject shooter)
+    {
+        this.shooter = shooter;
+        Physics2D.IgnoreCollision(GetComponent<Collider2D>(), shooter.GetComponent<Collider2D>(),true);
+        Invoke("EnableCollision", 0.1f);
+    }
 
+    private void EnableCollision()
+    {
+        Physics2D.IgnoreCollision(GetComponent<Collider2D>(), shooter.GetComponent<Collider2D>(),false);
+    }
     void OnCollisionEnter2D(Collision2D collision)
     {
         if(!hasHit && collision.gameObject.CompareTag("Ground"))
@@ -32,14 +44,11 @@ public class ArrowScript : MonoBehaviour
             rb.angularVelocity = 0;
             rb.isKinematic = true;
 
-            GroundController groundController = collision.gameObject.GetComponent<GroundController>();
-            if (groundController != null)
-            {
-                groundController.AttachArrow(transform);
-            }
             StickArrow(angle,collision);
-        } else if(!hasHit && collision.gameObject.layer == LayerMask.NameToLayer("Player 2"))
+            Debug.DrawRay(collision.contacts[0].point, collision.contacts[0].normal, Color.red, 5);
+        } else if(!hasHit && collision.gameObject.CompareTag("Player"))
         {
+            Debug.Log("Hit player");
             hasHit = true;
             Vector2 lastVelocity = rb.velocity;
             float angle = Mathf.Atan2(lastVelocity.y, lastVelocity.x) * Mathf.Rad2Deg;
@@ -47,6 +56,9 @@ public class ArrowScript : MonoBehaviour
             rb.angularVelocity = 0;
             rb.isKinematic = true;
 
+            Vector2 hitDirection = lastVelocity.normalized*-1;
+            collision.gameObject.GetComponent<PlayerScript>().TakeDamage(hitDirection);
+            Destroy(this.gameObject);
         }
     }
 
@@ -54,10 +66,7 @@ public class ArrowScript : MonoBehaviour
     {
         // Stick the arrow to the object it hit
         transform.localScale = startingScale;
-
         transform.rotation = Quaternion.Euler(0,0,angle);
-
-        transform.parent = collision.transform;
         isStuck = true;
     }
     // Update is called once per frame
