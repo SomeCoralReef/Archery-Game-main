@@ -11,17 +11,16 @@ using UnityEngine.InputSystem.Users;
 
 public class PlayerScript : MonoBehaviour
 {
-    private ArcheryInputs inputs;
-    private InputActionAsset inputAsset;
-    private InputActionMap player;
-    private InputAction move;
+    private ArcheryInputs archeryInputs;
+    // private InputActionAsset inputAsset;
+    // private InputActionMap player;
+    // private InputAction move;
     
     //This needs to be set up dynamically : i.e the playerIDnumber; 
     [Header("Player Set Up")]
     public int playerIDnumber;
     
-    [Header("Input Type")]
-    public PlayerInput playerInput;
+    private PlayerInput playerInput;
     private InputUser inputUser;
 
     [Header("PlayerSetup")]
@@ -77,24 +76,28 @@ public class PlayerScript : MonoBehaviour
 
     private void OnEnable()
     {
-        inputs.Player.Enable();
+        archeryInputs.Player.Enable();
     }
     
     private void OnDisable()
     {
-        inputs.Player.Disable();
+        archeryInputs.Player.Disable();
     }
 
     private void InitializeInputs()
     {
-        inputs = new ArcheryInputs();
-        inputs.Player.Move.performed += OnMove;
-        inputs.Player.Move.canceled += context => moveInput = 0;
-        inputs.Player.Dash.performed += OnDash;
-        inputs.Player.Jump.started += OnJump;
-        inputs.Player.Jump.canceled += context => isJumping = false;
-        inputs.Player.Shoot.canceled += OnFire;
-        inputs.Player.Aim.performed += context => {}; // Ensure Aim action is registered
+        archeryInputs = new ArcheryInputs();
+        playerInput = GetComponent<PlayerInput>();
+        inputUser = playerInput.user;
+        archeryInputs.asset.devices = playerInput.devices;
+        archeryInputs.Enable();
+        archeryInputs.Player.Move.performed += OnMove;
+        archeryInputs.Player.Move.canceled += context => moveInput = 0;
+        archeryInputs.Player.Dash.performed += OnDash;
+        archeryInputs.Player.Jump.started += OnJump;
+        archeryInputs.Player.Jump.canceled += context => isJumping = false;
+        archeryInputs.Player.Shoot.canceled += OnFire;
+        archeryInputs.Player.Aim.performed += context => {}; // Ensure Aim action is registered
     }
 
     private void AssignControls()
@@ -110,11 +113,8 @@ public class PlayerScript : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
-        inputAsset = this.GetComponent<PlayerInput>().actions;
-        player = inputAsset.FindActionMap("Player");
         SetupCircle();
         InitializeInputs();
-
     }
 
 
@@ -195,7 +195,7 @@ public class PlayerScript : MonoBehaviour
 
         // TODO: i woudnt use Camera.main, its better to directly ref the camera
         
-        Vector2 joystickInput = inputs.Player.Aim.ReadValue<Vector2>();
+        Vector2 joystickInput = archeryInputs.Player.Aim.ReadValue<Vector2>();
 
         Vector3 direction;
         if (joystickInput.sqrMagnitude > 0.1f)  // Dead zone check to prevent unwanted movements
@@ -216,7 +216,7 @@ public class PlayerScript : MonoBehaviour
         mousePos.z = 0;
         Vector3 direction = (mousePos - transform.position).normalized;*/
 
-        if (inputs.Player.Shoot.inProgress)
+        if (archeryInputs.Player.Shoot.inProgress)
         {
             holdTime += Time.deltaTime;
             circleRenderer.enabled = true;
@@ -254,7 +254,7 @@ public class PlayerScript : MonoBehaviour
         //     Shoot(direction,playerIDnumber);
         // }
 
-        if (inputs.Player.Jump.inProgress && isJumping)
+        if (archeryInputs.Player.Jump.inProgress && isJumping)
         {
             if (jumpTimer > 0)
             {
@@ -335,14 +335,13 @@ public class PlayerScript : MonoBehaviour
     
     private void Move()
     {
-        rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
         animator.SetFloat("xVelocity", Mathf.Abs(rb.velocity.x));
         animator.SetFloat("yVelocity", rb.velocity.y);
-        if(moveInput > 0)
+        if (moveInput > 0)
         {
             sr.flipX = true;
         }
-        else if(moveInput < 0)
+        else if (moveInput < 0)
         {
             sr.flipX = false;
         }

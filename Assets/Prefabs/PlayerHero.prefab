@@ -457,9 +457,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerIDnumber: 0
-  playerInput: {fileID: 0}
   speed: 5
-  deceleration: 5
+  deceleration: 3
   jumpForce: 5
   jumpTimeLimit: 0.3
   maxNumberofArrows: 3
@@ -535,7 +534,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: 4835ada7e21b0974fb2421e7c7996b60, type: 3}
-  m_NotificationBehavior: 3
+  m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -559,6 +558,14 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: f79721ec-da53-498f-80e7-c9bbbea4c432
     m_ActionName: Player/Shoot[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9f8ee612-1ec7-400f-b6d8-57a27d77c126
+    m_ActionName: Player/Dash[/Keyboard/f,/DualSenseGamepadHID/rightShoulder]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b0ad2047-6542-49fd-bcf6-44758d30fb21
+    m_ActionName: Player/Aim[/DualSenseGamepadHID/rightStick]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
