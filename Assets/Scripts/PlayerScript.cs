@@ -98,10 +98,13 @@ public class PlayerScript : MonoBehaviour
     }
 
     private void AssignControls()
-    {
+    {   
 
     }
-
+    void SetIntoChargeMode()
+    {
+        
+    }
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
