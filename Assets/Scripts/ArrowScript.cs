@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.Assertions.Must;
@@ -34,16 +35,18 @@ public class ArrowScript : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if(!hasHit && collision.gameObject.CompareTag("Ground"))
+        if(!hasHit && collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Wall"))
         {
             hasHit = true;
-            Vector2 lastVelocity = rb.velocity;
-            float angle = Mathf.Atan2(lastVelocity.y, lastVelocity.x) * Mathf.Rad2Deg;
             
             rb.velocity = Vector2.zero;
             rb.angularVelocity = 0;
             rb.isKinematic = true;
 
+            ContactPoint2D contact = collision.contacts[0];
+            Vector2 normal = contact.normal;
+
+            float angle = Mathf.Atan2(-normal.y, -normal.x) * Mathf.Rad2Deg;
             StickArrow(angle,collision);
             Debug.DrawRay(collision.contacts[0].point, collision.contacts[0].normal, Color.red, 5);
         } else if(!hasHit && collision.gameObject.CompareTag("Player"))
@@ -55,7 +58,6 @@ public class ArrowScript : MonoBehaviour
             rb.velocity = Vector2.zero;
             rb.angularVelocity = 0;
             rb.isKinematic = true;
-
             Vector2 hitDirection = lastVelocity.normalized*-1;
             collision.gameObject.GetComponent<PlayerScript>().TakeDamage(hitDirection);
             Destroy(this.gameObject);
@@ -65,10 +67,12 @@ public class ArrowScript : MonoBehaviour
     private void StickArrow(float angle, Collision2D collision)
     {
         // Stick the arrow to the object it hit
-        transform.localScale = startingScale;
+        transform.localScale = new Vector3(Mathf.Abs(startingScale.x), startingScale.y, startingScale.z);
         transform.rotation = Quaternion.Euler(0,0,angle);
+
         isStuck = true;
     }
+
     // Update is called once per frame
     void FixedUpdate()
     {

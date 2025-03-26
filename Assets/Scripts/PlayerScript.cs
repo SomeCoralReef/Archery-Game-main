@@ -1,13 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-//using System.Numerics;
 using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.UIElements;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Interactions;
 using UnityEngine.InputSystem.Users;
+
+using System.Text;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -42,7 +43,12 @@ public class PlayerScript : MonoBehaviour
     private int maxNumberofArrows = 3;
 
     [SerializeField]
-    public int currentNumberofArrows = 2;
+    public int currentNumberofArrows = 20;
+
+    [Header("Sliding Variables")]
+    private bool isTouchingWall;
+    private bool isWallSliding;
+    private float wallSlideSpeed=4f;
 
    [Header("Arrow Variables")]
     public float dashSpeed = 10f;
@@ -210,7 +216,11 @@ public class PlayerScript : MonoBehaviour
             direction = (mousePos - transform.position).normalized;
         }
 
-
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            maxNumberofArrows = 20;
+            currentNumberofArrows = 20;
+        }
         /*
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue()); // Get mouse position (NEW INPUT SYSTEM)
         mousePos.z = 0;
@@ -265,6 +275,13 @@ public class PlayerScript : MonoBehaviour
             {
                 isJumping = false;
             }
+        }
+
+        isWallSliding = isTouchingWall && !isGrounded && rb.velocity.y < 0;
+        if (isWallSliding)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, -wallSlideSpeed);
+            isGrounded = true;
         }
     }
 
@@ -345,10 +362,16 @@ public class PlayerScript : MonoBehaviour
         {
             sr.flipX = false;
         }
-        if (moveInput != 0)
+        if (isWallSliding)
         {
-            rb.velocity = isDashing ? new Vector2(moveInput * dashSpeed, 0) :
-                new Vector2(moveInput * speed, rb.velocity.y);
+    // Lock vertical velocity, allow horizontal drift
+            rb.velocity = new Vector2(moveInput * speed * 0.5f, -wallSlideSpeed);
+        }
+        else if (moveInput != 0)
+        {
+            rb.velocity = isDashing
+                ? new Vector2(moveInput * dashSpeed, rb.velocity.y)
+                : new Vector2(moveInput * speed, rb.velocity.y);
         }
         else
         {
@@ -396,7 +419,7 @@ public class PlayerScript : MonoBehaviour
         OnDisable();
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         rb.velocity = Vector2.zero;
-        rb.AddForce(hitDirection.normalized * 200f, ForceMode2D.Impulse);
+        rb.AddForce(-hitDirection.normalized * 5f, ForceMode2D.Impulse);
         sr.color = Color.red;
     }
 
@@ -414,13 +437,16 @@ public class PlayerScript : MonoBehaviour
         // Check if the collision normal indicates that the player is landing on a horizontal surface
             foreach (ContactPoint2D contact in col.contacts)
             {
+
                 if (contact.normal.y > 0.5f) // Adjust this threshold if needed
                 {
                     isGrounded = true;
                     animator.SetBool("isJumping", false);
-                    return;
+                } else if(Mathf.Abs(contact.normal.x)>0.5f)
+                {
+                    isTouchingWall = true;
                 }
-            }
+            } 
             foreach (ContactPoint2D contact in col.contacts)
             {
                 Debug.DrawRay(contact.point, contact.normal, Color.red, 1f);
@@ -434,6 +460,7 @@ public class PlayerScript : MonoBehaviour
         if (col.gameObject.CompareTag("Ground"))
         {
             isGrounded = false;
+            isTouchingWall = false;
         }
     }
 
