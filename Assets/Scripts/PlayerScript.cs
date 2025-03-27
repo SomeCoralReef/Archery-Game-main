@@ -12,14 +12,17 @@ using System.Text;
 
 public class PlayerScript : MonoBehaviour
 {
-    //This needs to be set up dynamically : i.e the playerIDnumber; 
-    [Header("Player Set Up")]
-    public int playerIDnumber;
-    
     private ArcheryInputs archeryInputs;
     private PlayerInput playerInput;
+    
+    [Header("References")]
+    [SerializeField] private BoxCollider2D groundCheck;
+    [SerializeField] private BoxCollider2D wallCheck;
+    [SerializeField] private LayerMask groundLayer;
 
     [Header("PlayerSetup")]
+    public int playerIDnumber;
+    [SerializeField] private float playerScale = 0.4f;
     public float speed;
     public float deceleration;
     public float jumpForce;
@@ -39,8 +42,8 @@ public class PlayerScript : MonoBehaviour
 
     [Header("Sliding Variables")]
     private bool isTouchingWall;
-    private bool isWallSliding;
-    private float wallSlideSpeed=4f;
+    private bool isSlidingWall;
+    [SerializeField] private float wallSlideSpeed;
 
    [Header("Arrow Variables")]
     public float dashSpeed = 10f;
@@ -163,8 +166,10 @@ public class PlayerScript : MonoBehaviour
     
     void Update()
     {
+        GroundCheck();
+        WallCheck();
+        
         Vector2 joystickInput = archeryInputs.Player.Aim.ReadValue<Vector2>();
-
         Vector3 direction;
         if (joystickInput.sqrMagnitude > 0.1f)  // Dead zone check to prevent unwanted movements
         {
@@ -227,12 +232,23 @@ public class PlayerScript : MonoBehaviour
                 isJumping = false;
             }
         }
-
-        isWallSliding = isTouchingWall && !isGrounded && rb.velocity.y < 0;
-        if (isWallSliding)
+    }
+    
+    private void GroundCheck()
+    {
+        isGrounded = Physics2D.OverlapBox(groundCheck.transform.position, groundCheck.size, 0, groundLayer);
+    }
+    
+    private void WallCheck()
+    {
+        isTouchingWall = Physics2D.OverlapBox(wallCheck.transform.position, wallCheck.size, 0, groundLayer);
+        if (isTouchingWall && !isGrounded && moveInput != 0)
         {
-            rb.velocity = new Vector2(rb.velocity.x, -wallSlideSpeed);
-            isGrounded = true;
+            isSlidingWall = true;
+        }
+        else
+        {
+            isSlidingWall = false;
         }
     }
     
@@ -292,20 +308,12 @@ public class PlayerScript : MonoBehaviour
     {
         animator.SetFloat("xVelocity", Mathf.Abs(rb.velocity.x));
         animator.SetFloat("yVelocity", rb.velocity.y);
-        if (moveInput > 0)
+        if (moveInput != 0)
         {
-            sr.flipX = true;
+            transform.localScale = new Vector3(-Mathf.Sign(moveInput), 1, 1) * playerScale;
         }
-        else if (moveInput < 0)
-        {
-            sr.flipX = false;
-        }
-        if (isWallSliding)
-        {
-    // Lock vertical velocity, allow horizontal drift
-            rb.velocity = new Vector2(moveInput * speed * 0.5f, -wallSlideSpeed);
-        }
-        else if (moveInput != 0)
+        
+        if (moveInput != 0)
         {
             rb.velocity = isDashing
                 ? new Vector2(moveInput * dashSpeed, rb.velocity.y)
@@ -314,6 +322,11 @@ public class PlayerScript : MonoBehaviour
         else
         {
             rb.velocity = Vector2.Lerp(rb.velocity, new Vector2(0, rb.velocity.y), deceleration * Time.fixedDeltaTime);
+        }
+
+        if (isSlidingWall)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, -wallSlideSpeed);
         }
     }
 
@@ -368,7 +381,6 @@ public class PlayerScript : MonoBehaviour
     {
         Invoke("Die", 3f);
         OnDisable();
-        Rigidbody2D rb = GetComponent<Rigidbody2D>();
         rb.velocity = Vector2.zero;
         rb.AddForce(-hitDirection.normalized * 5f, ForceMode2D.Impulse);
         sr.color = Color.red;
@@ -385,35 +397,26 @@ public class PlayerScript : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.CompareTag("Ground"))
-        {
-            // Check if the collision normal indicates that the player is landing on a horizontal surface
-            foreach (ContactPoint2D contact in col.contacts)
-            {
-
-                if (contact.normal.y > 0.5f) // Adjust this threshold if needed
-                {
-                    isGrounded = true;
-                    animator.SetBool("isJumping", false);
-                } else if(Mathf.Abs(contact.normal.x)>0.5f)
-                {
-                    isTouchingWall = true;
-                }
-            } 
-            foreach (ContactPoint2D contact in col.contacts)
-            {
-                Debug.DrawRay(contact.point, contact.normal, Color.red, 1f);
-            }
-        }
-    }
-    
-    void OnCollisionExit2D(Collision2D col)
-    {
-        if (col.gameObject.CompareTag("Ground"))
-        {
-            isGrounded = false;
-            isTouchingWall = false;
-        }
+        // if (col.gameObject.CompareTag("Ground"))
+        // {
+        //     // Check if the collision normal indicates that the player is landing on a horizontal surface
+        //     foreach (ContactPoint2D contact in col.contacts)
+        //     {
+        //
+        //         if (contact.normal.y > 0.5f) // Adjust this threshold if needed
+        //         {
+        //             isGrounded = true;
+        //             animator.SetBool("isJumping", false);
+        //         } else if(Mathf.Abs(contact.normal.x)>0.5f)
+        //         {
+        //             isTouchingWall = true;
+        //         }
+        //     } 
+        //     foreach (ContactPoint2D contact in col.contacts)
+        //     {
+        //         Debug.DrawRay(contact.point, contact.normal, Color.red, 1f);
+        //     }
+        // }
     }
 
     void Die()
