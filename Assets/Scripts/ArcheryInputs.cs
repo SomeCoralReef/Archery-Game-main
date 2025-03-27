@@ -71,6 +71,15 @@ public partial class @ArcheryInputs: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Charge"",
+                    ""type"": ""Button"",
+                    ""id"": ""b1915d27-8e8e-45fb-b84a-b52ab0b6283a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -216,6 +225,28 @@ public partial class @ArcheryInputs: IInputActionCollection2, IDisposable
                     ""action"": ""Aim"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b16ee5f6-eaee-4e1c-984d-1c735b296d77"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Charge"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6086381e-8eee-417c-80aa-f93ea5432884"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Charge"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -257,6 +288,7 @@ public partial class @ArcheryInputs: IInputActionCollection2, IDisposable
         m_Player_Shoot = m_Player.FindAction("Shoot", throwIfNotFound: true);
         m_Player_Dash = m_Player.FindAction("Dash", throwIfNotFound: true);
         m_Player_Aim = m_Player.FindAction("Aim", throwIfNotFound: true);
+        m_Player_Charge = m_Player.FindAction("Charge", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -323,6 +355,7 @@ public partial class @ArcheryInputs: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Shoot;
     private readonly InputAction m_Player_Dash;
     private readonly InputAction m_Player_Aim;
+    private readonly InputAction m_Player_Charge;
     public struct PlayerActions
     {
         private @ArcheryInputs m_Wrapper;
@@ -332,6 +365,7 @@ public partial class @ArcheryInputs: IInputActionCollection2, IDisposable
         public InputAction @Shoot => m_Wrapper.m_Player_Shoot;
         public InputAction @Dash => m_Wrapper.m_Player_Dash;
         public InputAction @Aim => m_Wrapper.m_Player_Aim;
+        public InputAction @Charge => m_Wrapper.m_Player_Charge;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -356,6 +390,9 @@ public partial class @ArcheryInputs: IInputActionCollection2, IDisposable
             @Aim.started += instance.OnAim;
             @Aim.performed += instance.OnAim;
             @Aim.canceled += instance.OnAim;
+            @Charge.started += instance.OnCharge;
+            @Charge.performed += instance.OnCharge;
+            @Charge.canceled += instance.OnCharge;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -375,6 +412,9 @@ public partial class @ArcheryInputs: IInputActionCollection2, IDisposable
             @Aim.started -= instance.OnAim;
             @Aim.performed -= instance.OnAim;
             @Aim.canceled -= instance.OnAim;
+            @Charge.started -= instance.OnCharge;
+            @Charge.performed -= instance.OnCharge;
+            @Charge.canceled -= instance.OnCharge;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -417,5 +457,6 @@ public partial class @ArcheryInputs: IInputActionCollection2, IDisposable
         void OnShoot(InputAction.CallbackContext context);
         void OnDash(InputAction.CallbackContext context);
         void OnAim(InputAction.CallbackContext context);
+        void OnCharge(InputAction.CallbackContext context);
     }
 }

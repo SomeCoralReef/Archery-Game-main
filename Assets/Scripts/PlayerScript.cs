@@ -12,17 +12,12 @@ using System.Text;
 
 public class PlayerScript : MonoBehaviour
 {
-    private ArcheryInputs archeryInputs;
-    // private InputActionAsset inputAsset;
-    // private InputActionMap player;
-    // private InputAction move;
-    
     //This needs to be set up dynamically : i.e the playerIDnumber; 
     [Header("Player Set Up")]
     public int playerIDnumber;
     
+    private ArcheryInputs archeryInputs;
     private PlayerInput playerInput;
-    private InputUser inputUser;
 
     [Header("PlayerSetup")]
     public float speed;
@@ -31,7 +26,7 @@ public class PlayerScript : MonoBehaviour
     public float jumpTimeLimit;
     private Rigidbody2D rb;
     private SpriteRenderer sr;
-    Animator animator;
+    private Animator animator;
     private float jumpTimer;
     private bool isGrounded;
     private bool isJumping;
@@ -39,10 +34,7 @@ public class PlayerScript : MonoBehaviour
     private int lastDashInputDirection;
     
     [Header("Arrow Variables")]
-    [SerializeField]
-    private int maxNumberofArrows = 3;
-
-    [SerializeField]
+    [SerializeField] private int maxNumberofArrows = 3;
     public int currentNumberofArrows = 20;
 
     [Header("Sliding Variables")]
@@ -58,7 +50,7 @@ public class PlayerScript : MonoBehaviour
     private float lastDashTime;
     private bool isDashing;
     public float dashTime = 0.1f;
-    int currentDashInputDir;
+    private int currentDashInputDir;
 
     [Header("Aiming Renderer")]
     public LineRenderer circleRenderer;
@@ -66,19 +58,14 @@ public class PlayerScript : MonoBehaviour
     public int circleSegments = 50;
     public float circleRadius = 3.0f;
     public float reducedcircleRadius = 1.5f;
-    private bool jumpRequest = false;
-    private int dashDirection = 0;
-
     
     [Header("Sub-Aiming Renderer")]
     public Transform aimingCircle1;
     public Transform aimingCircle2;
-    private float holdTime = 0f;
+    private float holdTime;
     public float holdTimeToMaxAccuracy = 2.0f;  // Time in seconds to reach maximum accuracy
     public float maxAimingDistance = 1.5f;  // Max distance the aiming circles can be apart
     public GameObject arrowPrefab;
-
-    private string inputMethod; //stores input type
 
     private void OnEnable()
     {
@@ -94,7 +81,6 @@ public class PlayerScript : MonoBehaviour
     {
         archeryInputs = new ArcheryInputs();
         playerInput = GetComponent<PlayerInput>();
-        inputUser = playerInput.user;
         archeryInputs.asset.devices = playerInput.devices;
         archeryInputs.Enable();
         archeryInputs.Player.Move.performed += OnMove;
@@ -104,16 +90,15 @@ public class PlayerScript : MonoBehaviour
         archeryInputs.Player.Jump.canceled += context => isJumping = false;
         archeryInputs.Player.Shoot.canceled += OnFire;
         archeryInputs.Player.Aim.performed += context => {}; // Ensure Aim action is registered
+        archeryInputs.Player.Charge.performed += OnCharge;
+        archeryInputs.Player.Charge.canceled += OnChargeRelease;
     }
-
-    private void AssignControls()
-    {   
-
-    }
+    
     void SetIntoChargeMode()
     {
         
     }
+    
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -123,15 +108,10 @@ public class PlayerScript : MonoBehaviour
         InitializeInputs();
     }
 
-
-
     void Start()
     {
-       
         AssignPlayerLayer();
     }
-
-
     
     void AssignPlayerLayer()
     {
@@ -183,24 +163,6 @@ public class PlayerScript : MonoBehaviour
     
     void Update()
     {
-        // if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
-        // {
-        //     jumpRequest = true;
-        // }
-        //
-        // if ((Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.A)) && (Time.time >= lastDashTime + dashCooldown))
-        // {
-        //     KeyCode currentKeyCode = Input.GetKeyDown(KeyCode.D) ? KeyCode.D : KeyCode.A;
-        //     if (currentKeyCode == lastKeyCode && (Time.time - lastTapTime) < doubleTapTime)
-        //     {
-        //         dashDirection = (currentKeyCode == KeyCode.D ? 1 : -1);
-        //     }
-        //     lastTapTime = Time.time;
-        //     lastKeyCode = currentKeyCode;
-        // }
-
-        // TODO: i woudnt use Camera.main, its better to directly ref the camera
-        
         Vector2 joystickInput = archeryInputs.Player.Aim.ReadValue<Vector2>();
 
         Vector3 direction;
@@ -221,10 +183,6 @@ public class PlayerScript : MonoBehaviour
             maxNumberofArrows = 20;
             currentNumberofArrows = 20;
         }
-        /*
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue()); // Get mouse position (NEW INPUT SYSTEM)
-        mousePos.z = 0;
-        Vector3 direction = (mousePos - transform.position).normalized;*/
 
         if (archeryInputs.Player.Shoot.inProgress)
         {
@@ -256,13 +214,6 @@ public class PlayerScript : MonoBehaviour
             circleRenderer.enabled = false;
             directionRenderer.enabled = false;
         }
-        
-        // TODO: old shoot
-        // if(Input.GetMouseButtonUp(0) && currentNumberofArrows > 0)
-        // {
-        //     currentNumberofArrows--;
-        //     Shoot(direction,playerIDnumber);
-        // }
 
         if (archeryInputs.Player.Jump.inProgress && isJumping)
         {
@@ -284,18 +235,22 @@ public class PlayerScript : MonoBehaviour
             isGrounded = true;
         }
     }
-
+    
+    void FixedUpdate()
+    {
+        Move();
+    }
     
     private void OnFire(InputAction.CallbackContext context)
     {
         if(currentNumberofArrows > 0)
         {
-            Shoot2(playerIDnumber);
+            DirectionalShoot(playerIDnumber);
             currentNumberofArrows--;
         }
     }
     
-    void Shoot2(int playerIDnumber)
+    void DirectionalShoot(int playerIDnumber)
     {
         // Get positions relative to the player
         Vector3 pos1 = aimingCircle1.position - transform.position;
@@ -323,21 +278,6 @@ public class PlayerScript : MonoBehaviour
         arrowRb.AddForce(shootDirection * 25f, ForceMode2D.Impulse); // Use a constant force magnitude
     }
 
-
-    void FixedUpdate()
-    {
-        Move();
-    }
-    
-    // handling arrow up
-    void OnTriggerEnter2D(Collider2D col)
-    {
-        if(col.CompareTag("Arrow") && (currentNumberofArrows < maxNumberofArrows))
-        {
-            HandleArrowPickUp(col.gameObject);
-        }
-    }
-
     void HandleArrowPickUp(GameObject arrow)
     {
         ArrowScript arrowScript = arrow.GetComponent<ArrowScript>();
@@ -347,8 +287,6 @@ public class PlayerScript : MonoBehaviour
             currentNumberofArrows++;
         }
     }
-
-
     
     private void Move()
     {
@@ -389,14 +327,27 @@ public class PlayerScript : MonoBehaviour
     {
         if (lastDashTime + dashCooldown < Time.time)
         {
-            Dash(currentDashInputDir);
+            Vector2 dashForce = new Vector2(dashSpeed * currentDashInputDir, 0);
+            rb.AddForce(dashForce, ForceMode2D.Impulse);
+            lastDashTime = Time.time;
             isDashing = true;
             lastDashTime = Time.time;
-            Invoke("ResetDash", dashTime);
+            Invoke(nameof(DashResetInvoke), dashTime);
         }
     }
+    
+    private void OnCharge(InputAction.CallbackContext context)
+    {
+        // TODO: Implement charge
+        SetIntoChargeMode();
+    }
 
-    private void ResetDash()
+    private void OnChargeRelease(InputAction.CallbackContext context)
+    {
+        // TODO: Implement charge release
+    }
+
+    private void DashResetInvoke()
     {
         isDashing = false;
     }
@@ -422,19 +373,21 @@ public class PlayerScript : MonoBehaviour
         rb.AddForce(-hitDirection.normalized * 5f, ForceMode2D.Impulse);
         sr.color = Color.red;
     }
-
-    private void Dash(int direction)
+    
+    // handling arrow up
+    void OnTriggerEnter2D(Collider2D col)
     {
-        Vector2 dashForce = new Vector2(dashSpeed * direction, 0);
-        rb.AddForce(dashForce, ForceMode2D.Impulse);
-        lastDashTime = Time.time;
+        if(col.CompareTag("Arrow") && (currentNumberofArrows < maxNumberofArrows))
+        {
+            HandleArrowPickUp(col.gameObject);
+        }
     }
 
     void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.CompareTag("Ground"))
         {
-        // Check if the collision normal indicates that the player is landing on a horizontal surface
+            // Check if the collision normal indicates that the player is landing on a horizontal surface
             foreach (ContactPoint2D contact in col.contacts)
             {
 
@@ -453,8 +406,7 @@ public class PlayerScript : MonoBehaviour
             }
         }
     }
-
-
+    
     void OnCollisionExit2D(Collision2D col)
     {
         if (col.gameObject.CompareTag("Ground"))
