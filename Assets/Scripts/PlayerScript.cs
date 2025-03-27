@@ -32,6 +32,7 @@ public class PlayerScript : MonoBehaviour
     private bool isJumping;
     private float moveInput;
     private int lastDashInputDirection;
+    private bool ChargeMode = false;
     
     [Header("Arrow Variables")]
     [SerializeField] private int maxNumberofArrows = 3;
@@ -67,6 +68,13 @@ public class PlayerScript : MonoBehaviour
     public float maxAimingDistance = 1.5f;  // Max distance the aiming circles can be apart
     public GameObject arrowPrefab;
 
+    [Header("Sub-Aiming ChargeMode")]
+    public float chargeTime = 4.0f;
+    public GameObject ChargeUpUI;
+    public GameObject ChargeThresholdUI;
+    private float lowerChargeThreshold;
+    private float upperChargeThreshold;
+
     private void OnEnable()
     {
         archeryInputs.Player.Enable();
@@ -94,11 +102,7 @@ public class PlayerScript : MonoBehaviour
         archeryInputs.Player.Charge.canceled += OnChargeRelease;
     }
     
-    void SetIntoChargeMode()
-    {
-        
-    }
-    
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -321,7 +325,7 @@ public class PlayerScript : MonoBehaviour
     {
         moveInput = context.ReadValue<float>();
     }
-
+    
 
     private void OnDash(InputAction.CallbackContext context)
     {
@@ -340,6 +344,46 @@ public class PlayerScript : MonoBehaviour
     {
         // TODO: Implement charge
         SetIntoChargeMode();
+    }
+    void SetIntoChargeMode()
+    {
+        ChargeMode = true;
+        float ChargeUpUIScale = 0.5f;
+
+        if(!ChargeUpUI.activeSelf)
+        {
+            ChargeUpUI.SetActive(true);
+        }
+        ChargeUpUI.transform.localScale = new Vector3(ChargeUpUIScale, ChargeUpUIScale, ChargeUpUIScale);
+        ChargeUpUI.SetActive(true);
+
+
+        float randomBetween = UnityEngine.Random.Range(0.2f,0.3f);
+        ChargeThresholdUI.transform.localScale = new Vector3(randomBetween, randomBetween, randomBetween);
+        lowerChargeThreshold = randomBetween -0.1f;
+        upperChargeThreshold = randomBetween + 0.1f;
+        ChargeThresholdUI.SetActive(true);
+        StartCoroutine(ShrinkCircleOverTime(ChargeUpUI, chargeTime));
+    }
+    
+    IEnumerator ShrinkCircleOverTime(GameObject circle, float duration)
+    {
+    Vector3 startScale = Vector3.one * 0.5f;
+    Vector3 endScale = Vector3.zero;
+    float elapsed = 0f;
+
+    circle.transform.localScale = startScale;
+
+    while (elapsed < duration)
+    {
+        float t = elapsed / duration;
+        circle.transform.localScale = Vector3.Lerp(startScale, endScale, t);
+        elapsed += Time.deltaTime;
+        yield return null;
+    }
+
+    circle.transform.localScale = endScale;
+    circle.SetActive(false);
     }
 
     private void OnChargeRelease(InputAction.CallbackContext context)
