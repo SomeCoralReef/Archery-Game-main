@@ -77,6 +77,7 @@ public class PlayerScript : MonoBehaviour
     public GameObject ChargeThresholdUI;
     private float lowerChargeThreshold;
     private float upperChargeThreshold;
+    private Coroutine chargeShrinkCoroutine;
 
     private void OnEnable()
     {
@@ -361,7 +362,7 @@ public class PlayerScript : MonoBehaviour
     void SetIntoChargeMode()
     {
         ChargeMode = true;
-        float ChargeUpUIScale = 0.5f;
+        float ChargeUpUIScale = 3.0f;
 
         if(!ChargeUpUI.activeSelf)
         {
@@ -371,17 +372,21 @@ public class PlayerScript : MonoBehaviour
         ChargeUpUI.SetActive(true);
 
 
-        float randomBetween = UnityEngine.Random.Range(0.2f,0.3f);
+        float randomBetween = UnityEngine.Random.Range(0.9f,1.5f);
         ChargeThresholdUI.transform.localScale = new Vector3(randomBetween, randomBetween, randomBetween);
-        lowerChargeThreshold = randomBetween -0.1f;
-        upperChargeThreshold = randomBetween + 0.1f;
+        lowerChargeThreshold = randomBetween -1.0f;
+        upperChargeThreshold = randomBetween + 1.0f;
         ChargeThresholdUI.SetActive(true);
-        StartCoroutine(ShrinkCircleOverTime(ChargeUpUI, chargeTime));
+        if (chargeShrinkCoroutine != null)
+{
+    StopCoroutine(chargeShrinkCoroutine);
+}
+chargeShrinkCoroutine = StartCoroutine(ShrinkCircleOverTime(ChargeUpUI, chargeTime));
     }
     
     IEnumerator ShrinkCircleOverTime(GameObject circle, float duration)
     {
-    Vector3 startScale = Vector3.one * 0.5f;
+    Vector3 startScale = Vector3.one * 3f;
     Vector3 endScale = Vector3.zero;
     float elapsed = 0f;
 
@@ -401,7 +406,39 @@ public class PlayerScript : MonoBehaviour
 
     private void OnChargeRelease(InputAction.CallbackContext context)
     {
-        // TODO: Implement charge release
+        releaseCharge();
+    }
+
+    void releaseCharge()
+    {
+    if (!ChargeMode) return;
+    if (chargeShrinkCoroutine != null)
+{
+    StopCoroutine(chargeShrinkCoroutine);
+    chargeShrinkCoroutine = null;
+}
+
+    float currentScaleX = ChargeUpUI.transform.localScale.x;
+
+    if (currentScaleX >= lowerChargeThreshold && currentScaleX <= upperChargeThreshold)
+    {
+        Debug.Log("Charge successful!");
+        if (currentNumberofArrows < maxNumberofArrows)
+        {
+            currentNumberofArrows++;
+            Debug.Log("Perfect charge! Arrow reloaded.");
+        }
+    }
+    else
+    {
+        Debug.Log("Charge missed. No arrow reloaded.");
+    }
+
+    // Reset UI and state
+    ChargeMode = false;
+    ChargeUpUI.SetActive(false);
+    ChargeThresholdUI.SetActive(false);
+
     }
 
     private void DashResetInvoke()
