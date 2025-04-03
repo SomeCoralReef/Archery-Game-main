@@ -1,64 +1,34 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
+using Unity.VisualScripting;
 public class MainMenuManager : MonoBehaviour
 {
-    public static MainMenuManager Instance { get; private set; }
-
+    public static MainMenuManager instance;
+    [Header("Panels")]
     public GameObject mainMenuPanel;
     public GameObject mapSelectPanel;
     public GameObject characterSelectPanel;
+    public GameObject hoveredMap;
 
-    private string selectedMap;
-    private string selectedCharacter;
+    public int playerCount;
 
-    public int playerCount { get; private set; } = 1;
-    private HashSet<string> registeredInputs = new HashSet<string>();
+    public string selectedMapName;
 
-    void Awake()
+    
+    [Header("Buttons")]
+    public GameObject playButton;
+    public GameObject Firstbutton;
+    private GameObject lastSelectedMapObject;
+    private GameObject firstCharacterObject;
+    private GameObject lastSelectedCharacterObject;
+
+    public void Start()
     {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-
-        Instance = this;
-        DontDestroyOnLoad(gameObject); // optional
-    }
-
-    void Start()
-    {
-        registeredInputs.Add("Keyboard");
-        ShowMainMenu();
-    }
-
-    void Update()
-    {
-           DetectNewPlayerInput();
-    }
-
-    private void DetectNewPlayerInput()
-    {
-                // Loop through possible joystick inputs
-        for (int i = 1; i <= 4; i++) // Adjust based on max expected controllers
-        {
-            string joystickName = "Joystick" + i;
-
-            if (!registeredInputs.Contains(joystickName))
-            {
-                // Detect if any button is pressed on this joystick
-                if (Input.GetKeyDown("joystick " + i + " button 0") ||
-                    Input.GetKeyDown("joystick " + i + " button 1") ||
-                    Input.GetKeyDown("joystick " + i + " button 2") ||
-                    Input.GetKeyDown("joystick " + i + " button 3"))
-                {
-                    registeredInputs.Add(joystickName);
-                    playerCount++;
-                    Debug.Log($"New player joined with {joystickName}. Total players: {playerCount}");
-                }
-            }
-        }
+        ShowMainMenu();   
     }
 
     public void ShowMainMenu()
@@ -66,32 +36,76 @@ public class MainMenuManager : MonoBehaviour
         mainMenuPanel.SetActive(true);
         mapSelectPanel.SetActive(false);
         characterSelectPanel.SetActive(false);
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(playButton);
+        GameObject currentSelectedGameObject = EventSystem.current.currentSelectedGameObject;
+        if (currentSelectedGameObject != null)
+            Debug.Log(currentSelectedGameObject.name);
+            
     }
 
-    public void OnPlayButtonPressed()
+    void Update()
+    {
+        GameObject current = EventSystem.current.currentSelectedGameObject;
+
+        if (current != lastSelectedMapObject)
+        {
+            if (lastSelectedMapObject != null)
+            {
+                Image lastImage = lastSelectedMapObject.GetComponent<Image>();
+                if (lastImage != null)
+                    lastImage.color = Color.white; // Reset old selection
+            }
+
+            if (current != null)
+            {
+                Image currentImage = current.GetComponent<Image>();
+                if (currentImage != null)
+                    currentImage.color = Color.blue; // Highlight current selection
+            }
+
+            lastSelectedMapObject = current;
+        }
+    }
+
+    public void OnPlayPressed()
     {
         mainMenuPanel.SetActive(false);
         mapSelectPanel.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(Firstbutton);
+        GameObject currentSelectedGameObject = EventSystem.current.currentSelectedGameObject;
+        if (currentSelectedGameObject != null)
+            Debug.Log(currentSelectedGameObject.name);
     }
 
-    public void OnMapSelected(string mapName)
+    public void OnMapOneSelected()
     {
-        selectedMap = mapName;
+        selectedMapName = "Map1";
+        Debug.Log("Map 1 selected");
+        SelectCharacter();
+    }
+    public void OnMapTwoSelected()
+    {
+        selectedMapName = "Map2";
+        Debug.Log("Map 2 selected");
+        SelectCharacter();
+    }
+    public void OnMapThreeSelected()
+    {
+        selectedMapName = "Map3";
+        Debug.Log("Map 3 selected");
+        SelectCharacter();
+    }
+
+    public void SelectCharacter()
+    {
         mapSelectPanel.SetActive(false);
         characterSelectPanel.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(Firstbutton);
+        GameObject currentSelectedGameObject = EventSystem.current.currentSelectedGameObject;
+        if (currentSelectedGameObject != null)
+            Debug.Log(currentSelectedGameObject.name);
     }
-
-    public void OnCharacterSelected(string characterName)
-    {
-        selectedCharacter = characterName;
-        LoadGameScene();
-    }
-
-    private void LoadGameScene()
-    {
-        SceneManager.LoadScene(selectedMap);
-    }
-
-    public string GetSelectedMap() => selectedMap;
-    public string GetSelectedCharacter() => selectedCharacter;
 }

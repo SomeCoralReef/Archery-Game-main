@@ -7,7 +7,6 @@ public class ShowNumberOfPlayersConnected : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        int numberOfPlayersConnected = MainMenuManager.Instance.playerCount;
        
     }
 
@@ -17,6 +16,6 @@ public class ShowNumberOfPlayersConnected : MonoBehaviour
          // Get the number of players connected from the server
         // For now, let's just set it to 2
         
-        GetComponent<TextMeshProUGUI>().text = "Number of players connected: " + MainMenuManager.Instance.playerCount;
+        //int numberOfPlayersConnected = MainMenuManager.instance.playerCount;
     }
 }
