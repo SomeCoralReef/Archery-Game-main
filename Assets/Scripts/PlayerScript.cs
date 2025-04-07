@@ -19,6 +19,8 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] private BoxCollider2D groundCheck;
     [SerializeField] private BoxCollider2D wallCheck;
     [SerializeField] private LayerMask groundLayer;
+    private float jumpHeight = 0.5f;
+
 
     [Header("PlayerSetup")]
     public int playerIDnumber;
